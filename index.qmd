@@ -7,7 +7,7 @@ format:
     mermaid: 
       theme: dark
     theme: simple
-    logo: _SharedFolder_fss_introduction_r/img/logo_CLESSN.png
+    logo: img/logo_CLESSN.png
     footer: "Analyse de données avec R"
     transition: slide
     transition-speed: fast
@@ -50,7 +50,7 @@ format:
 
 :::{.column}
 
-![](_SharedFolder_fss_introduction_r/img/science.png){.absolute top=150 left=800 width="30%"}
+![](img/science.png){.absolute top=150 left=800 width="30%"}
 :::
 
 ::::
@@ -63,10 +63,10 @@ format:
 
 <br><br>
 
-![](_SharedFolder_fss_introduction_r/img/binoculars.png){.absolute top=430 left=600 width="10%"} 
+![](img/binoculars.png){.absolute top=430 left=600 width="10%"} 
 
-![](_SharedFolder_fss_introduction_r/img/data.png){.absolute top=300 left=800 width="40%"}
-![](_SharedFolder_fss_introduction_r/img/citizen.jpg){.absolute top=470 left=470 width="10%"}
+![](img/data.png){.absolute top=300 left=800 width="40%"}
+![](img/citizen.jpg){.absolute top=470 left=470 width="10%"}
 
 
 :::{.notes}
@@ -174,7 +174,7 @@ Chaque tâche spécifique lié à l'analyse de donnéees peut être automatisé 
 ## La CLESSN{.smaller}
 
 ![](https://www.clessn.com/assets/img/logo-black.svg){.absolute top=330 left=630 width="30%"}
-![](_SharedFolder_fss_introduction_r/img/yaduf.png){.absolute top=200 left=0 width="35%"}
+![](img/yaduf.png){.absolute top=200 left=0 width="35%"}
 Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)
 
 
@@ -192,7 +192,7 @@ Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)
 
 ## Datagotchi{.smaller}
 
-![](_SharedFolder_fss_introduction_r/img/datagotchi_usa.png){.absolute top=0 left=850 width="30%"}
+![](img/datagotchi_usa.png){.absolute top=0 left=850 width="30%"}
 
 - Application utilisant des variables lifestyles pour prédire le vote
 - Utiliser R et l'analyse de données à travers ce projet:
@@ -204,13 +204,13 @@ Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)
 
 ## 
 
-![](_SharedFolder_fss_introduction_r/img/datagotchi_graph.png){.absolute top=0 left=0 width="200%"}
+![](img/datagotchi_graph.png){.absolute top=0 left=0 width="200%"}
 
 ::: {.r-stack}
 
-![](_SharedFolder_fss_introduction_r/img/cartogram.png){.fragment .absolute top=0 left=0 width="200%"}
+![](img/cartogram.png){.fragment .absolute top=0 left=0 width="200%"}
 
-![](_SharedFolder_fss_introduction_r/img/turnout.png){.fragment .absolute top=0 left=0 width="200%"}
+![](img/turnout.png){.fragment .absolute top=0 left=0 width="200%"}
 
 ::: 
 
@@ -218,13 +218,13 @@ Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)
 
 - R ne se limite pas à l'analyse statistique, il peut aussi être utilisé pour développer des applications web interactives
 
-![](_SharedFolder_fss_introduction_r/img/catalogue.png){absolute top=0 left=0 width="20%"}
+![](img/catalogue.png){absolute top=0 left=0 width="20%"}
 
 ## Mais derrière tout ça... R{.smaller}
 
 - Voici l'envers du décor : 
 
-![](_SharedFolder_fss_introduction_r/img/catalogue_code.png){absolute top=0 left=0 width="20%"}
+![](img/catalogue_code.png){absolute top=0 left=0 width="20%"}
 
 ## Analyse textuelle
 
@@ -261,7 +261,7 @@ Votre R est toujours ouvert dans un dossier, et donc vous devez savoir où il es
 
 <br><br>
 
-![](_SharedFolder_fss_introduction_r/img/chemin_arbo.png){.absolute top=400 left=75 width="80%"}
+![](img/chemin_arbo.png){.absolute top=400 left=75 width="80%"}
 
 ## Concepts importants{.smaller} 
 
