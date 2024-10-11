@@ -25,6 +25,12 @@ format:
 - Atelier libre avec des mentors de la CLESSN 
 - Exercices avec R
 
+
+## Voici le lien vers la présentation : {.center .smaller} 
+
+`https://capel201.github.io`
+
+
 ## Objectifs de l'atelier{.smaller}
 
 - Introduire R pour l'analyse de données.
