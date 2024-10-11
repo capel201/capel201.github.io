@@ -641,7 +641,7 @@ Camille Pelletier<br>Laurence-Olivier M. Foisy
 <section id="analyse-textuelle" class="slide level2">
 <h2>Analyse textuelle</h2>
 <ul>
-<li>Analyse de ton.
+<li>Analyse de ton
 <ul>
 <li>Est-ce que le texte est positif ou négatif?</li>
 </ul></li>
@@ -653,7 +653,7 @@ Camille Pelletier<br>Laurence-Olivier M. Foisy
 <li>Transcription audio</li>
 </ul>
 </section>
-<section id="installer-r-et-rstudio" class="slide level2">
+<section id="installer-r-et-rstudio" class="slide level2 smaller">
 <h2>Installer R et RStudio</h2>
 <ul>
 <li>C’est quoi la différence entre R et RStudio?</li>
@@ -661,67 +661,146 @@ Camille Pelletier<br>Laurence-Olivier M. Foisy
 <li>RStudio facilite l’utilisation de R</li>
 <li>RStudio est un IDE (Integrated Development Environment)</li>
 </ul>
-</section>
-<section id="une-fois-dans-rstudio" class="slide level2">
-<h2>Une fois dans RStudio</h2>
-<p>Les quatre fenêtres de RStudio Comment écrire du code dans RStudio</p>
+<p><br><br></p>
+<h3 id="à-télécharger">À télécharger :</h3>
 <ul>
-<li>Console</li>
-<li>Environment</li>
-<li>Files</li>
-<li>Plots</li>
+<li><a href="https://cran.r-project.org/">Installer R</a></li>
+<li><a href="https://www.rstudio.com/products/rstudio/download/">Installer RStudio</a></li>
 </ul>
 </section>
+<section id="section-1" class="slide level2" data-background-image="img/rstudio.png">
+<h2></h2>
+</section>
+<section id="section-2" class="slide level2" data-background-image="img/rstudio_script.png">
+<h2></h2>
+</section>
+<section id="section-3" class="slide level2" data-background-image="img/rstudio_console.png">
+<h2></h2>
+</section>
+<section id="section-4" class="slide level2" data-background-image="img/rstudio_files.png">
+<h2></h2>
+</section>
+<section id="section-5" class="slide level2" data-background-image="img/rstudio_env.png">
+<h2></h2>
+<!--
+
+## 
+
+![](img/rstudio.png){.absolute top=0 left=0 width="200%"}
+
+::: {.r-stack}
+
+![](img/rstudio_script.png){.fragment .absolute top=0 left=0 width="200%"}
+
+![](img/rstudio_console.png){.fragment .absolute top=0 left=0 width="200%"}
+
+![](img/rstudio_files.png){.fragment .absolute top=0 left=0 width="200%"}
+
+![](img/rstudio_env.png){.fragment .absolute top=0 left=0 width="200%"}
+
+::: 
+
+-->
+</section>
 <section id="concept-important-le-chemin-darborescence" class="slide level2 smaller">
-<h2>Concept important : Le chemin d’arborescence!</h2>
-<p><br><br></p>
-<blockquote>
-<p>Vous devez savoir où vous êtes dans votre ordinateur pour pouvoir importer des données ou exporter des graphiques. Votre R est toujours ouvert dans un dossier, et donc vous devez savoir où il est pour pouvoir importer des données.</p>
-</blockquote>
-<p><br><br></p>
+<h2>Concept important : Le chemin d’arborescence</h2>
+<ul>
+<li>À tout moment vous devez savoir où vous êtes dans votre ordinateur pour pouvoir importer des données, exporter des graphiques ou mettre des fichiers en relation</li>
+<li>Votre R est toujours ouvert dans un dossier, et donc vous devez savoir où il est pour pouvoir importer des données</li>
+<li>La fonction <code>getwd()</code> dans R permet de savoir où vous êtes</li>
+</ul>
 <p><img data-src="img/chemin_arbo.png" class="absolute" style="top: 400px; left: 75px; width: 80%; "></p>
 </section>
-<section id="concepts-importants" class="slide level2 smaller">
-<h2>Concepts importants</h2>
-<p>Savoir ce que vous voulez faire avant de commencer à écrire du code. La plus grosse erreur est de commencer à écrire du code sans savoir ce que vous voulez faire.</p>
+<section id="concept-important-planifier-avant-de-coder" class="slide level2 smaller">
+<h2>Concept important : Planifier avant de coder</h2>
+<h4 id="la-plus-grosse-erreur-est-de-commencer-à-coder-sans-savoir-ce-que-vous-voulez-faire">La plus grosse erreur est de commencer à coder sans savoir ce que vous voulez faire</h4>
+<p><br></p>
+<ul>
+<li>Clarifer vos objectifs: Qu’est-ce que vous voulez faire?
+<ul>
+<li>Nettoyer des données?</li>
+<li>Faire un graphique?</li>
+</ul></li>
+</ul>
+<p>Les possibilités sont infinies, donc il est important de savoir où vous voulez aller</p>
+</section>
+<section id="concept-important-décomposer-le-problème" class="slide level2 smaller">
+<h2>Concept important : Décomposer le problème</h2>
+<ul>
+<li>Une fois que vous savez ce que vous voulez faire, il est important de décomposer le problème en petites étapes</li>
+<li>Un script R pour une seule tâche
+<ul>
+<li>Bien nommer vos scripts pour savoir ce qu’ils font</li>
+<li>Exemples:
+<ul>
+<li><code>nettoyage_donnees.R</code></li>
+<li><code>graphique.R</code></li>
+</ul></li>
+</ul></li>
+<li>Chaque script doit être clair et facile à comprendre</li>
+<li>Commenter votre code avec des <code>#</code></li>
+</ul>
 </section>
 <section id="importer-des-données" class="slide level2 smaller">
 <h2>Importer des données</h2>
-<p>Les données sont souvent dans des fichiers Excel, CSV, ou autres.</p>
-<p>On utilise des fonctions comme read.csv() pour lire les fichiers et on assigne l’opération à un objet.</p>
 <ul>
-<li><code>df &lt;- read.csv("chemin/vers/data.csv")</code></li>
+<li>Les données sont souvent dans des fichiers Excel, CSV, ou autres
+<ul>
+<li>On utilise des fonctions comme <code>read.csv()</code> pour lire les fichiers</li>
+</ul></li>
+</ul>
+<p><br></p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"chemin/vers/data.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><br></p>
+<ul>
+<li>Dans cette ligne de code il y a plusieurs éléments importants:
+<ul>
+<li>Le nom de l’objet : <code>df</code> dans ce cas-ci, c’est un dataframe</li>
+<li>L’opérateur d’assignation : <code>&lt;-</code></li>
+<li>La fonction qui permet de lire le fichier : <code>read.csv()</code></li>
+<li>Le chemin vers le fichier : <code>"chemin/vers/data.csv"</code></li>
+</ul></li>
+</ul>
+</section>
+<section id="chemins-darborescence" class="slide level2 smaller">
+<h2>Chemins d’arborescence</h2>
+<h4 id="important-de-comprendre-comment-spécifier-le-chemin-vers-un-fichier">Important de comprendre comment spécifier le chemin vers un fichier</h4>
+<p>Voici les deux façons de spécifier le chemin :</p>
+<ul>
+<li>Absolu: <code>/Users/username/Documents/projet/data/data.csv</code>
+<ul>
+<li>Utile seulement sur votre ordinateur, un autre utilisateur ne pourra pas utiliser le même chemin</li>
+</ul></li>
+<li>Relatif: <code>data/data.csv</code>
+<ul>
+<li>Utile pour partager le code avec d’autres utilisateurs</li>
+</ul></li>
+</ul>
+<p><br></p>
+<h4 id="différence-entre-mac-et-windows">Différence entre mac et windows</h4>
+<ul>
+<li>Mac: <code>/</code></li>
+<li>Windows: <code>\</code> (il faut s’assurer de changer les <code>\</code> pour des <code>/</code>)</li>
+</ul>
+</section>
+<section id="importer-des-données-1" class="slide level2 smaller">
+<h2>Importer des données</h2>
+<p>Autres fonctions pour importer des données dépendamment du format:</p>
+<ul>
 <li><code>df &lt;- readxl::read_excel("chemin/vers/data.xlsx")</code></li>
 <li><code>df &lt;- readRDS("chemin/vers/data.rds")</code></li>
 </ul>
+<p><img data-src="img/df_in_env.png" class="absolute" style="top: 300px; left: 150px; width: 70%; "></p>
 </section>
-<section id="lanalyse-descriptive-des-données" class="slide level2">
+<section id="lanalyse-descriptive-des-données" class="slide level2 smaller">
 <h2>L’analyse descriptive des données</h2>
 <ul>
 <li><p>Qu’est-ce que c’est?</p></li>
-<li><p>table()</p></li>
-<li><p>names()</p></li>
-<li><p>hist()</p></li>
-<li><p>print()</p></li>
-<li><p>summary()</p></li>
-</ul>
-</section>
-<section id="manipulation-de-données" class="slide level2 smaller">
-<h2>Manipulation de données</h2>
-<ul>
-<li>Tidyverse
-<ul>
-<li>dplyr</li>
-<li>tidyr</li>
-</ul></li>
-<li>Plusieurs fonctions pour manipuler les données
-<ul>
-<li>filter()</li>
-<li>select()</li>
-<li>mutate()</li>
-<li>group_by()</li>
-<li>summarize()</li>
-</ul></li>
+<li><p><code>table()</code></p></li>
+<li><p><code>names()</code></p></li>
+<li><p><code>hist()</code></p></li>
+<li><p><code>print()</code></p></li>
+<li><p><code>summary()</code></p></li>
 </ul>
 </section>
 <section id="représentation-graphique-des-données" class="slide level2 smaller">
@@ -735,7 +814,7 @@ Camille Pelletier<br>Laurence-Olivier M. Foisy
 <li>Peut déformer les données et être source de distraction</li>
 </ul></li>
 <li>Éviter les graphiques « spaghetti »</li>
-<li>Commencer par du gris</li>
+<li>Commencer en noir et blanc.</li>
 <li>Utiliser les couleurs de manière efficace</li>
 <li>Ratio encre/information</li>
 </ul>
@@ -745,8 +824,10 @@ Camille Pelletier<br>Laurence-Olivier M. Foisy
 <ul>
 <li>ggplot2
 <ul>
-<li>Les layers</li>
-<li>Les geom</li>
+<li>layers</li>
+<li>geom</li>
+<li>labs</li>
+<li>themes</li>
 </ul></li>
 <li>Shiny
 <ul>
@@ -757,24 +838,18 @@ Camille Pelletier<br>Laurence-Olivier M. Foisy
 <section id="analyse-statistique" class="slide level2">
 <h2>Analyse statistique</h2>
 <ul>
-<li>Les régressions</li>
-<li>Les tests statistiques</li>
-<li>Les modèles</li>
-</ul>
-</section>
-<section id="tableaux-de-régression" class="slide level2">
-<h2>Tableaux de régression</h2>
-<ul>
-<li>modelsummary</li>
+<li>Régression linéaire</li>
+<li>Régression logistique</li>
+<li>Corrélation</li>
+<li>Test t</li>
 </ul>
 </section>
 <section id="bonnes-pratiques" class="slide level2">
 <h2>Bonnes pratiques</h2>
 <ul>
-<li>Comment nommer vos objets</li>
-<li>Comment commenter votre code</li>
-<li>Comment organiser votre code</li>
-<li>Comment partager votre code</li>
+<li>Nommer vos objets de façon explicite</li>
+<li>Commenter votre code</li>
+<li>Organiser votre code</li>
 </ul>
 </section>
 <section id="git" class="slide level2 smaller">
@@ -802,9 +877,9 @@ Camille Pelletier<br>Laurence-Olivier M. Foisy
 <li>Dans le terminal:</li>
 </ul></li>
 </ul>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"username"</span></span>
-<span id="cb1-2"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.email votre@email.com</span>
-<span id="cb1-3"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper store</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"username"</span></span>
+<span id="cb2-2"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> user.email votre@email.com</span>
+<span id="cb2-3"><a href=""></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper store</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <!--`-->
 </section>
 <section id="git-1" class="slide level2 smaller" data-transition="none">
@@ -815,7 +890,7 @@ Camille Pelletier<br>Laurence-Olivier M. Foisy
 <h2>GitHub</h2>
 
 <img data-src="img/git_github.png" class="r-stretch"></section>
-<section id="github-1" class="slide level2">
+<section id="github-1" class="slide level2 smaller">
 <h2>GitHub</h2>
 <ul>
 <li><p>GitHub = Git + Internet</p></li>
@@ -853,35 +928,35 @@ Camille Pelletier<br>Laurence-Olivier M. Foisy
 <ul>
 <li>Ce projet est maintenant un dossier sur votre ordinateur. Vous pouvez le modifier, le supprimer, le déplacer, etc.</li>
 </ul>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href=""></a><span class="fu">git</span> clone https://lien/vers/repo.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href=""></a><span class="fu">git</span> clone https://lien/vers/repo.git</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <!--`-->
 <ol start="2" type="1">
 <li>Modifier le projet, ajouter des fichiers, etc.</li>
 </ol>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href=""></a><span class="fu">git</span> pull </span>
-<span id="cb3-2"><a href=""></a><span class="fu">git</span> add votre_fichier_1 votre_fichier_2</span>
-<span id="cb3-3"><a href=""></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Message de commit"</span></span>
-<span id="cb3-4"><a href=""></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="fu">git</span> pull </span>
+<span id="cb4-2"><a href=""></a><span class="fu">git</span> add votre_fichier_1 votre_fichier_2</span>
+<span id="cb4-3"><a href=""></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Message de commit"</span></span>
+<span id="cb4-4"><a href=""></a><span class="fu">git</span> push</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <!--`-->
 </section>
 <section id="organiser-votre-répertoire-et-placer-vos-données" class="slide level2 smaller">
 <h2>Organiser votre répertoire et placer vos données</h2>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href=""></a><span class="ex">/MonProjet</span></span>
-<span id="cb4-2"><a href=""></a><span class="ex">├──</span> data/                </span>
-<span id="cb4-3"><a href=""></a><span class="ex">│</span>   ├── raw_data.csv      </span>
-<span id="cb4-4"><a href=""></a><span class="ex">│</span>   └── cleaned_data.csv  </span>
-<span id="cb4-5"><a href=""></a><span class="ex">├──</span> scripts/             </span>
-<span id="cb4-6"><a href=""></a><span class="ex">│</span>   ├── analyse.R         </span>
-<span id="cb4-7"><a href=""></a><span class="ex">│</span>   └── visualization.R   </span>
-<span id="cb4-8"><a href=""></a><span class="ex">├──</span> results/             </span>
-<span id="cb4-9"><a href=""></a><span class="ex">│</span>   ├── summary_statistics.csv  </span>
-<span id="cb4-10"><a href=""></a><span class="ex">│</span>   └── plots/                  </span>
-<span id="cb4-11"><a href=""></a><span class="ex">│</span>       └── data_distribution.png  </span>
-<span id="cb4-12"><a href=""></a><span class="ex">├──</span> docs/                </span>
-<span id="cb4-13"><a href=""></a><span class="ex">│</span>   ├── methodology.md    </span>
-<span id="cb4-14"><a href=""></a><span class="ex">│</span>   ├── references.bib    </span>
-<span id="cb4-15"><a href=""></a><span class="ex">│</span>   └── project_presentation.qmd  </span>
-<span id="cb4-16"><a href=""></a><span class="ex">└──</span> README.md            </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href=""></a><span class="ex">/MonProjet</span></span>
+<span id="cb5-2"><a href=""></a><span class="ex">├──</span> data/                </span>
+<span id="cb5-3"><a href=""></a><span class="ex">│</span>   ├── raw_data.csv      </span>
+<span id="cb5-4"><a href=""></a><span class="ex">│</span>   └── cleaned_data.csv  </span>
+<span id="cb5-5"><a href=""></a><span class="ex">├──</span> scripts/             </span>
+<span id="cb5-6"><a href=""></a><span class="ex">│</span>   ├── analyse.R         </span>
+<span id="cb5-7"><a href=""></a><span class="ex">│</span>   └── visualization.R   </span>
+<span id="cb5-8"><a href=""></a><span class="ex">├──</span> results/             </span>
+<span id="cb5-9"><a href=""></a><span class="ex">│</span>   ├── summary_statistics.csv  </span>
+<span id="cb5-10"><a href=""></a><span class="ex">│</span>   └── plots/                  </span>
+<span id="cb5-11"><a href=""></a><span class="ex">│</span>       └── data_distribution.png  </span>
+<span id="cb5-12"><a href=""></a><span class="ex">├──</span> docs/                </span>
+<span id="cb5-13"><a href=""></a><span class="ex">│</span>   ├── methodology.md    </span>
+<span id="cb5-14"><a href=""></a><span class="ex">│</span>   ├── references.bib    </span>
+<span id="cb5-15"><a href=""></a><span class="ex">│</span>   └── project_presentation.qmd  </span>
+<span id="cb5-16"><a href=""></a><span class="ex">└──</span> README.md            </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <!--`-->
 </section>
 <section id="apprendre-plus-de-r" class="slide level2 smaller">
@@ -893,13 +968,13 @@ Camille Pelletier<br>Laurence-Olivier M. Foisy
 <li>Advanced R</li>
 </ul>
 </section>
-<section id="ressources" class="slide level2">
+<section id="ressources" class="slide level2 smaller">
 <h2>Ressources</h2>
 <p>Quoi faire quand ça ne fonctionne pas?</p>
 <ul>
 <li>ChatGPT</li>
 <li>Réessayer ChatGPT</li>
-<li>La documentation de R</li>
+<li>La documentation de R (ex: <code>?mean()</code> dans votre console)</li>
 <li>Google</li>
 </ul>
 </section>
