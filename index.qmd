@@ -386,7 +386,7 @@ Autres fonctions pour importer des données dépendamment du format:
 - Éviter les graphiques « spaghetti » 
   - Évitez les lignes trop complexes qui se chevauchent et s'entremêlent
 - Commencer en noir et blanc 
-  - Utiliser les couleurs de manière efficace
+  - Utilisez les couleurs de manière efficace
 
 
 ## Représentation graphique des données{.smaller}
