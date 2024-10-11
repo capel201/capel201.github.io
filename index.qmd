@@ -164,12 +164,12 @@ Chaque tâche spécifique lié à l'analyse de donnéees peut être automatisé 
 ### Très utilisé en science sociale
 
 - Beaucoup de ressources
-- Beaucoup de tutoriels orientés vers les sciences sociales
+- Beaucoup de tutoriels orientés vers les sciences sociales et autres!
   - Datacamp
   - Coursera
   - Datanovia
 
-#### Bref... important d'utiliser les mêmes outils que les chercheurs dans votre domaine
+#### Bref... important d'utiliser R
 
 ## La CLESSN{.smaller}
 
