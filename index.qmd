@@ -443,14 +443,15 @@ print(df_summarized)
 
 ### Principes généraux de la visualisation
 
-- Montrer les données
-- Choisir des visualisations appropriées : Quelles informations seront utiles ?
-- Réduire le bruit visuel
-  - Peut déformer les données et être source de distraction
-- Éviter les graphiques « spaghetti »
-- Commencer en noir et blanc.
-- Utiliser les couleurs de manière efficace
-- Ratio encre/information
+- Montrer les données 
+  - Évitez les distractions inutiles
+- Choisir des visualisations appropriées 
+  - Quelles informations seront utiles ?
+- Éviter les graphiques « spaghetti » 
+  - Évitez les lignes trop complexes qui se chevauchent et s'entremêlent
+- Commencer en noir et blanc 
+  - Utiliser les couleurs de manière efficace
+
 
 
 ## Visualisation avec ggplot2{auto-animate=true}
