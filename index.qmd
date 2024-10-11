@@ -385,7 +385,7 @@ nrow(df)
 
 ```
 
-## Analyse rapide d'une variable
+## Analyse rapide d'une variable{.smaller}
 
 ```r
 # Voir le nombre de valeurs pour chaque élément d'une variable
@@ -399,10 +399,12 @@ mean(df$Fertility)
 
 ```
 
+<br>
+
 - `$` permet d'accéder à une variable dans un dataframe.
 - On accède à la variable `Fertility` dans le dataframe `df` avec `df$Fertility`
 
-## Filter et sélectionner des variables
+## Filter et sélectionner des variables{.smaller}
 
 ```r
 # Sélectionner des colonnes 
@@ -454,7 +456,7 @@ print(df_summarized)
 
 
 
-## Visualisation avec ggplot2{auto-animate=true}
+## Visualisation avec ggplot2{auto-animate=true .smaller}
 
 ### Initialiser un graphique
 
@@ -466,7 +468,7 @@ ggplot(df, aes(x = Agriculture, y = Fertility, color = Education))
 - `x` et `y` sont les variables à utiliser pour les axes x et y
 - `color` est la variable à utiliser pour la couleur
 
-## Visualisation avec ggplot2{auto-animate=true}
+## Visualisation avec ggplot2{auto-animate=true .smaller}
 
 ### Ajouter un geom_()
 
@@ -482,7 +484,7 @@ ggplot(df, aes(x = Agriculture, y = Fertility, color = Education)) +
   - `geom_histogram()` est pour un histogramme
 
 
-## Visualisation avec ggplot2{auto-animate=true}
+## Visualisation avec ggplot2{auto-animate=true .smaller}
 
 ### Ajouter une échelle de couleur
 
@@ -497,7 +499,7 @@ ggplot(df, aes(x = Agriculture, y = Fertility, color = Education)) +
 - `name` est le nom de la légende
 - Vous pouvez utiliser les hexcodes pour les couleurs
 
-## Visualisation avec ggplot2{auto-animate=true}
+## Visualisation avec ggplot2{auto-animate=true .smaller}
 
 ### Ajouter des titres et des labels
 
@@ -512,7 +514,7 @@ ggplot(df, aes(x = Agriculture, y = Fertility, color = Education)) +
   ) 
 ```
 
-## Visualisation avec ggplot2{auto-animate=true}
+## Visualisation avec ggplot2{auto-animate=true .smaller}
 
 ### Ajouter un thème
 
@@ -532,7 +534,7 @@ ggplot(df, aes(x = Agriculture, y = Fertility, color = Education)) +
 - Il existe plusieurs thèmes prédéfinis dans ggplot2
 - Vous pouvez aussi créer votre propre thème
 
-## Visualisation avec ggplot2{auto-animate=true}
+## Visualisation avec ggplot2{auto-animate=true .smaller}
 
 ### Sauvegarder le graphique
 
@@ -552,7 +554,7 @@ ggsave("nom_du_graphique.png", width = 10, height = 6)
 
 - Vous pouvez spécifier le format du graphique (png, pdf, etc.) ainsi que le chemin pour sauvegarder le graphique
 
-## Visualisation avec ggplot2{auto-animate=true}
+## Visualisation avec ggplot2{auto-animate=true .smaller}
 
 ### Un histogramme de la variable Fertility
 
@@ -567,7 +569,7 @@ ggplot(df, aes(x = Fertility)) +
   theme_minimal()
 ```
 
-## Analyse statistique
+## Analyse statistique{.smaller}
 
 ```r
 # Calculer la corrélation entre Fertility et Agriculture
@@ -584,7 +586,7 @@ modele <- lm(Fertility ~ Agriculture, data = df)
 summary(modele)
 ```
 
-## Bonnes pratiques
+## Bonnes pratiques{.smaller}
 
 - Nommer vos objets de façon explicite
 - Commenter votre code
@@ -592,7 +594,7 @@ summary(modele)
 
 ![](https://d33wubrfki0l68.cloudfront.net/b88ef926a004b0fce72b2526b0b5c4413666a4cb/24a30/cover.png){.absolute top=0 left=800 width="30%"}
 
-## Organiser votre environnement de travail
+## Organiser votre environnement de travail{.smaller}
 
 ```bash
 /MonProjet
@@ -637,7 +639,7 @@ summary(modele)
 
 ::::
 
-## Git
+## Git{.smaller}
 
 - Télécharger et installer Git depuis [git-scm.com](git-scm.com)
 
@@ -718,4 +720,4 @@ Quoi faire quand ça ne fonctionne pas?
   - Stackoverflow
   - Stackexchange
 
-## Conclusion
+## Merci!{.center}
