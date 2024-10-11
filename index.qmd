@@ -507,7 +507,7 @@ git push
 
 ## En apprendre plus{.smaller} 
 
-- [swirl](https://swirlstats.com/)
+- [swirl](https://swirlstats.com/students.html)
 - [Datacamp](https://www.datacamp.com/)
 - [R4DS (R for Data Science)](https://r4ds.had.co.nz/)
 - [Advanced R](https://adv-r.hadley.nz/)
