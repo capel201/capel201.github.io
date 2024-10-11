@@ -363,17 +363,81 @@ Autres fonctions pour importer des données dépendamment du format:
 
 ![](img/df_in_env.png){.absolute top=300 left=150 width="70%"}
 
+# Codons!
 
-## L'analyse descriptive des données{.smaller}
+## Nous allons utiliser le dataframe `swiss`{.smaller}
 
-- Qu'est-ce que c'est?
+```r
+# Charger les packages nécessaires
+library(dplyr) # Manipulation de données
+library(ggplot2) # Graphiques
 
-- `table()`
-- `names()`
-- `hist()`
-- `print()`
-- `summary()`
+# Importer les données swiss (jeu de données intégré)
+df <- swiss
 
+# Explorer les données
+View(df)
+summary(df)
+names(df)
+head(df)
+ncol(df)
+nrow(df)
+
+```
+
+## Analyse rapide d'une variable
+
+```r
+# Voir le nombre de valeurs pour chaque élément d'une variable
+table(df$Fertility)
+
+# Histogramme de la variable 'Fertility'
+hist(df$Fertility)
+
+# Obtenir la moyenne de la variable 'Fertility'
+mean(df$Fertility)
+
+```
+
+- `$` permet d'accéder à une variable dans un dataframe.
+- On accède à la variable `Fertility` dans le dataframe `df` avec `df$Fertility`
+
+## Filter et sélectionner des variables
+
+```r
+# Sélectionner des colonnes 
+# (par exemple, Fertility, Education et Agriculture)
+
+df_selected <- df %>%
+  select(Fertility, Education, Agriculture)
+
+# Filtrer les lignes pour inclure uniquement les cantons 
+# avec une fertilité supérieure à la moyenne
+
+mean_fertility <- mean(df_selected$Fertility, na.rm = TRUE)
+
+df_filtered <- df_selected %>%
+  filter(Fertility > mean_fertility)
+```
+
+## Modifier des variables
+
+```r
+# Créer une nouvelle variable binaire "high_agriculture" 
+# indiquant si le pourcentage d'agriculture est supérieur à 50
+
+df_mutated <- df_filtered %>%
+  mutate(high_agriculture = ifelse(Agriculture > 50, 1, 0))
+
+# Regrouper par "high_agriculture" et calculer la moyenne de l'éducation
+
+df_summarized <- df_mutated %>%
+  group_by(high_agriculture) %>%
+  summarize(moyenne_education = mean(Education, na.rm = TRUE))
+
+# Afficher le résultat final
+print(df_summarized)
+```
 
 ## Représentation graphique des données{.smaller}
 
@@ -388,15 +452,84 @@ Autres fonctions pour importer des données dépendamment du format:
 - Utiliser les couleurs de manière efficace
 - Ratio encre/information
 
-## Représentation graphique des données{.smaller}
 
-- ggplot2
-  - layers
-  - geom
-  - labs
-  - themes
-- Shiny
-  - Créer des applications interactives
+## Visualisation avec ggplot2{auto-animate=true}
+
+### Initialiser un graphique
+
+```{.r code-line-numbers="1"}
+ggplot(df, aes(x = Agriculture, y = Fertility, color = Education)) 
+```
+- `df` est le dataframe
+- `aes()` est la fonction qui permet de spécifier les variables à utiliser
+- `x` et `y` sont les variables à utiliser pour les axes x et y
+- `color` est la variable à utiliser pour la couleur
+
+## Visualisation avec ggplot2{auto-animate=true}
+
+### Ajouter un geom_()
+
+```{.r code-line-numbers="2"}
+ggplot(df, aes(x = Agriculture, y = Fertility, color = Education)) +
+  geom_point(alpha = 0.8) # Le alpha est la transparence
+```
+
+- Il existe plusieurs `geom_()` pour différents types de graphiques
+  - `geom_point()` est pour un nuage de points
+  - `geom_line()` est pour un graphique en ligne
+  - `geom_bar()` est pour un graphique en barres
+  - `geom_histogram()` est pour un histogramme
+
+
+## Visualisation avec ggplot2{auto-animate=true}
+
+### Ajouter une échelle de couleur
+
+```{.r code-line-numbers="3"}
+ggplot(df, aes(x = Agriculture, y = Fertility, color = Education)) +
+  geom_point(alpha = 0.8) + # Le alpha est la transparence
+  scale_color_gradient(low = "blue", high = "red", name = "Éducation") 
+```
+
+- `scale_color_gradient()` permet de spécifier les couleurs pour la variable `Education`
+- `low` et `high` sont les couleurs pour les valeurs les plus basses et les plus hautes
+- `name` est le nom de la légende
+- Vous pouvez utiliser les hexcodes pour les couleurs
+
+## Visualisation avec ggplot2{auto-animate=true}
+
+### Ajouter des titres et des labels
+
+```{.r code-line-numbers="4,5,6,7,8"}
+ggplot(df, aes(x = Agriculture, y = Fertility, color = Education)) +
+  geom_point(alpha = 0.8) + # Le alpha est la transparence
+  scale_color_gradient(low = "blue", high = "red", name = "Éducation") +
+  labs(
+    title = "Relation entre l'agriculture et la fertilité en Suisse",
+    x = "Pourcentage d'agriculture",
+    y = "Fertilité"
+  ) 
+```
+
+## Visualisation avec ggplot2{auto-animate=true}
+
+### Ajouter un thème
+
+```{.r code-line-numbers="9"}
+ggplot(df, aes(x = Agriculture, y = Fertility, color = Education)) +
+  geom_point(alpha = 0.8) + # Le alpha est la transparence
+  scale_color_gradient(low = "blue", high = "red", name = "Éducation") +
+  labs(
+    title = "Relation entre l'agriculture et la fertilité en Suisse",
+    x = "Pourcentage d'agriculture",
+    y = "Fertilité"
+  ) +
+  theme_minimal()
+```
+
+- `theme_minimal()` est un thème minimaliste
+- Il existe plusieurs thèmes prédéfinis dans ggplot2
+- Vous pouvez aussi créer votre propre thème
 
 ## Analyse statistique
 
