@@ -532,18 +532,87 @@ ggplot(df, aes(x = Agriculture, y = Fertility, color = Education)) +
 - Il existe plusieurs thèmes prédéfinis dans ggplot2
 - Vous pouvez aussi créer votre propre thème
 
+## Visualisation avec ggplot2{auto-animate=true}
+
+### Sauvegarder le graphique
+
+```{.r code-line-numbers="11"}
+ggplot(df, aes(x = Agriculture, y = Fertility, color = Education)) +
+  geom_point(alpha = 0.8) + # Le alpha est la transparence
+  scale_color_gradient(low = "blue", high = "red", name = "Éducation") +
+  labs(
+    title = "Relation entre l'agriculture et la fertilité en Suisse",
+    x = "Pourcentage d'agriculture",
+    y = "Fertilité"
+  ) +
+  theme_minimal()
+
+ggsave("nom_du_graphique.png", width = 10, height = 6)
+```
+
+- Vous pouvez spécifier le format du graphique (png, pdf, etc.) ainsi que le chemin pour sauvegarder le graphique
+
+## Visualisation avec ggplot2{auto-animate=true}
+
+### Un histogramme de la variable Fertility
+
+```r
+ggplot(df, aes(x = Fertility)) +
+  geom_histogram(fill = "skyblue", color = "white", bins = 5) +
+  labs(
+    title = "Distribution de la fertilité en Suisse",
+    x = "Fertilité",
+    y = "Nombre de cantons"
+  ) +
+  theme_minimal()
+```
+
 ## Analyse statistique
 
-- Régression linéaire
-- Régression logistique
-- Corrélation
-- Test t
+```r
+# Calculer la corrélation entre Fertility et Agriculture
+
+correlation <- cor(df$Fertility, df$Agriculture)
+print(paste("Corrélation entre Fertility et Agriculture:", round(correlation, 2)))
+
+# Effectuer une régression linéaire avec Fertility comme variable dépendante
+
+modele <- lm(Fertility ~ Agriculture, data = df)
+
+# Afficher le résumé du modèle de régression
+
+summary(modele)
+```
 
 ## Bonnes pratiques
 
 - Nommer vos objets de façon explicite
 - Commenter votre code
 - Organiser votre code
+
+![](https://d33wubrfki0l68.cloudfront.net/b88ef926a004b0fce72b2526b0b5c4413666a4cb/24a30/cover.png){.absolute top=0 left=800 width="30%"}
+
+## Organiser votre environnement de travail
+
+```bash
+/MonProjet
+├── data/                
+│   ├── raw_data.csv      
+│   └── cleaned_data.csv  
+├── scripts/             
+│   ├── analyse.R         
+│   └── visualization.R   
+├── results/             
+│   ├── summary_statistics.csv  
+│   └── plots/                  
+│       └── data_distribution.png  
+├── docs/                
+│   ├── methodology.md    
+│   ├── references.bib    
+│   └── project_presentation.qmd  
+└── README.md            
+```
+
 
 ## Git{.smaller}
 
@@ -568,7 +637,7 @@ ggplot(df, aes(x = Agriculture, y = Fertility, color = Education)) +
 
 ::::
 
-## Important
+## Git
 
 - Télécharger et installer Git depuis [git-scm.com](git-scm.com)
 
@@ -622,26 +691,7 @@ git push
 ```
 <!--`-->
 
-## Organiser votre répertoire et placer vos données{.smaller}
 
-```bash
-/MonProjet
-├── data/                
-│   ├── raw_data.csv      
-│   └── cleaned_data.csv  
-├── scripts/             
-│   ├── analyse.R         
-│   └── visualization.R   
-├── results/             
-│   ├── summary_statistics.csv  
-│   └── plots/                  
-│       └── data_distribution.png  
-├── docs/                
-│   ├── methodology.md    
-│   ├── references.bib    
-│   └── project_presentation.qmd  
-└── README.md            
-```
 <!--`-->
 
 ## En apprendre plus{.smaller} 
