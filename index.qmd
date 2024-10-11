@@ -227,10 +227,15 @@ Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)
 
 ![](img/catalogue_code.png){absolute top=0 left=0 width="20%"}
 
-## Analyse textuelle
+## Analyse textuelle{.smaller}
 
 - Analyse de ton 
   - Est-ce que le texte est positif ou négatif?
+
+![](img/time_series_by_article.png){.absolute top=200 left=70 width="80%"}  
+
+## Mais aussi ...{.smaller}
+
 - Catégorisation de texte 
   - Est-ce que le texte parle de politique, de santé, de sport?
 - Analyse d'image
