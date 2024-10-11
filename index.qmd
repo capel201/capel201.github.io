@@ -462,20 +462,6 @@ git config --global credential.helper store
 - Acheté par Microsoft pour 7.5 milliards de dollars
 - Lieu d'entreposage de plusieurs projets open source
 
-## Ajouter vos accès{.smaller}
-
-- Créer un compte GitHub :
-- Générer un token d'accès classique :
-    - Connectez-vous à GitHub et allez dans vos Paramètres.
-    - Dans la section Developer Settings, cliquez sur Personal Access Tokens, puis sur Tokens (classic).
-    - Créez un nouveau token en cliquant sur Generate new token (classic).
-    - Choisissez la durée illimité et donnez tous les accès        
-    - Copiez le token généré, car vous ne pourrez plus le visualiser après avoir quitté cette page.
-    
-- Quand Git demandera un identifiant et un mot de passe, entrez :
-    - Identifiant : votre nom d'utilisateur GitHub.
-    - Mot de passe : collez le token que vous avez généré.
-
 ## Comment l'utiliser?{.smaller}
 
 1. Cloner un projet existant sur votre ordinateur.
@@ -519,12 +505,12 @@ git push
 ```
 <!--`-->
 
-## Apprendre plus de R{.smaller} 
+## En apprendre plus{.smaller} 
 
-- swirl
-- Datacamp
-- R4DS (R for Data Science)
-- Advanced R
+- [swirl](https://swirlstats.com/)
+- [Datacamp](https://www.datacamp.com/)
+- [R4DS (R for Data Science)](https://r4ds.had.co.nz/)
+- [Advanced R](https://adv-r.hadley.nz/)
 
 
 ## Ressources{.smaller}
@@ -532,8 +518,15 @@ git push
 Quoi faire quand ça ne fonctionne pas?
 
 - ChatGPT
+  - Être clair et précis dans vos requêtes
+  - Expliquer la structure de vos données
+  - Copier-coller le message d'erreur
+  - Copier-coller la documentation d'un package
 - Réessayer ChatGPT
+  - C'est rare que ChatGPT ne trouve pas la réponse
 - La documentation de R (ex: `?mean()` dans votre console)
 - Google
+  - Stackoverflow
+  - Stackexchange
 
 ## Conclusion
