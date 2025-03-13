@@ -135,11 +135,11 @@ Chaque tâche spécifique lié à l'analyse de donnéees peut être automatisé 
 
 ### Reproductibilité
 
-- Rendre les analyses [reproductibles](https://github.com/clessn/beyond_multiple_choices)
+- Rendre les analyses reproductibles
 - Permet de partager les analyses
   - Les scripts R permettent de partager facilement le travail
 - Permet de retracer les erreurs
-- Partager le code
+- Partager le code [(GitHub, GitLab, etc.)](https://github.com/clessn/beyond_multiple_choices)
   - Encourage la transparence et la collaboration dans la recherche
 
 ## Pourquoi R?{.smaller}
@@ -255,7 +255,7 @@ Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)
 
 ![](img/shinygotchi_front.png)
 
-## Après R
+## Après R {.smaller}
 
 ### Apprendre R vous permet de comprendre d'autres langages de programmation
 
