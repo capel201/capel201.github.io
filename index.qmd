@@ -1,37 +1,23 @@
 ---
-title: Initiation à l'analyse de données avec R 
-author: Camille Pelletier<br>Laurence-Olivier M. Foisy
-institute: Université Laval
+title: "Introduction à R"
+author: Jérémie Drouin<br>Camille Pelletier
+institute: Faculté des sciences sociales
+lang: fr
+from: markdown+emoji
 format:
   revealjs:
     mermaid: 
       theme: dark
     theme: simple
-    logo: img/logo_CLESSN.png
-    footer: "Analyse de données avec R"
+    logo: https://upload.wikimedia.org/wikipedia/en/thumb/9/90/Ulaval_Shield.svg/800px-Ulaval_Shield.svg.png
+    footer: "[CAPP](https://www.capp.ulaval.ca)"
     transition: slide
     transition-speed: fast
+    code-fold: false
+    code-overflow: wrap
 ---
 
-## Plan de l'atelier{.smaller}
-
-### 9h à 12h 
-- Qu'est-ce que l'analyse de données?
-- Pourquoi R?
-- Introduction à R et RStudio
-
-
-### 12h à 15h
-- Atelier libre avec des mentors de la CLESSN 
-- Exercices avec R
-
-
-## Voici le lien vers la présentation : {.center .smaller} 
-
-`https://capel201.github.io`
-
-
-## Objectifs de l'atelier{.smaller}
+## Objectifs du cours{.smaller}
 
 - Introduire R pour l'analyse de données.
   - Les dataframes
@@ -42,46 +28,6 @@ format:
 
 > Le but est que vous puissiez sortir d'ici avec une compréhension de base de R et que vous soyez capable d'aller chercher des ressources pour continuer à apprendre.
 
-## Pourquoi suivre cet atelier?{.smaller} 
-
-::::{.columns}
-
-:::{.column width="70%"}
-
-- Base solide pour la recherche académique
-
-> Permet également de comprendre la pertinence de l'utilisation d'un logiciel de traitement de données et d'obtenir des outils pour dédramatiser la science des données
-
-:::
-
-:::{.column}
-
-![](img/science.png){.absolute top=150 left=800 width="30%"}
-:::
-
-::::
-
-## Pourquoi suivre cet atelier?{.smaller}
-
-<br><br>
-
-### Comprendre le monde autour de nous à travers des données
-
-<br><br>
-
-![](img/binoculars.png){.absolute top=430 left=600 width="10%"} 
-
-![](img/data.png){.absolute top=300 left=800 width="40%"}
-![](img/citizen.jpg){.absolute top=470 left=470 width="10%"}
-
-
-:::{.notes}
-Les données sont partout, mais pas nécessairement compréhensible dans leur forme « raw ». L'analyse de données permet de simplifier ces données pour comprendre et expliquer des phénomènes ou des comportements dans le monde qui nous entoure.
-
-Pouvoir de prédiction: prédire comment certaines variables ou facteurs influencent d’autres variables ou événements. 
-:::
-
-
 ## Qu'est-ce que l'analyse de données?{.smaller}
 
 > L'analyse de données vise à explorer, décrire et interpréter des informations recueillies sur les comportements humains, les relations sociales et les phénomènes sociétaux. **Ce processus peut inclure des données quantitatives (comme des données issus de sondages) et des données qualitatives (comme des entretiens ou des observations)**.
@@ -89,13 +35,14 @@ Pouvoir de prédiction: prédire comment certaines variables ou facteurs influen
 ::: {.incremental}
 Principales étapes de l'analyse de données :
 
-1. Collecte des données
+1. Acquisition des données
 2. Préparation des données
-3. Analyse statistique
+3. Analyse des données
+4. Communication des résultats
 :::
 
 
-## Les logiciels d'analyse de données{.smaller}
+## Les outils d'analyse de données{.smaller}
 
 ![](https://upload.wikimedia.org/wikipedia/commons/e/ea/SPSS_logo.svg){.absolute top=400 left=100 width="20%"}
 
@@ -119,8 +66,9 @@ Principales étapes de l'analyse de données :
 - Gratuit
 - Collaboratif
 - Communauté active
-  - Stackoverflow
-  - r-bloggers
+  - StackExchange
+  - stackoverflow
+  - reddit.com/r/Rlanguage 
 - Adapté aux besoins des utilisateurs
 
 :::{.notes}
@@ -152,9 +100,42 @@ Chaque tâche spécifique lié à l'analyse de donnéees peut être automatisé 
 
 <br><br>
 
+### Packages CLESSN
+
+<!-- NOTE: Ajouter descriptions packages -->
+
+- [sondr](https://github.com/clessnverse/sondr)
+  - Permet l'automatisation de plusieurs aspects de l'analyse de données. Nous permet de faire des analyses factorielles en quelques secondes.
+- [clellm](https://github.com/clessn/clellm)
+  - Permet d'utiliser des LLM open-source directement en R et permet d'utiliser des fonctions disponibles seulement en Python, en R.
+- [clessnize](https://github.com/clessnverse/clessnize)
+  - Permet de standardiser le style de nos graphiques rapidement sans avoir à répéter les mêmes étapes à chaque fois.
+
+## Pourquoi R?{.smaller}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1024px-R_logo.svg.png){.absolute top=0 left=800 width="20%"}
+
+<br><br>
+
+### Tidyverse
+
+- Collection de packages pour la manipulation de données
+
+- `dplyr` : manipulation de données
+- `ggplot2` : graphiques
+- `tidyr` : nettoyage de données
+- `readr` : importation de données
+- `stringr` : manipulation de chaînes de caractères
+
+## Pourquoi R?{.smaller}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1024px-R_logo.svg.png){.absolute top=0 left=800 width="20%"}
+
+<br><br>
+
 ### Reproductibilité
 
-- Rendre les analyses reproductibles
+- Rendre les analyses [reproductibles](https://github.com/clessn/beyond_multiple_choices)
 - Permet de partager les analyses
   - Les scripts R permettent de partager facilement le travail
 - Permet de retracer les erreurs
@@ -170,17 +151,39 @@ Chaque tâche spécifique lié à l'analyse de donnéees peut être automatisé 
 ### Très utilisé en science sociale
 
 - Beaucoup de ressources
-- Beaucoup de tutoriels orientés vers les sciences sociales et autres!
+- Beaucoup de tutoriels orientés vers les sciences sociales
   - Datacamp
+  - swirl()
   - Coursera
-  - Datanovia
 
-#### Bref... important d'utiliser R
+#### Bref... important d'utiliser les mêmes outils que les chercheurs dans votre domaine
 
-## La CLESSN{.smaller}
+## Pourquoi R?{.smaller}
 
-![](https://www.clessn.com/assets/img/logo-black.svg){.absolute top=330 left=630 width="30%"}
-![](img/yaduf.png){.absolute top=200 left=0 width="35%"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1024px-R_logo.svg.png){.absolute top=0 left=800 width="20%"}
+
+<br><br>
+
+### Exemples d'utilisation par des organisations
+
+- [Utilisé par AirBnB pour l'analyse de données](https://medium.com/airbnb-engineering/using-r-packages-and-education-to-scale-data-science-at-airbnb-906faa58e12d)
+
+- [Utilisé par la BBC pour leurs graphiques](https://bbc.github.io/rcookbook/)
+
+- [Utilisé par la MLB pour l'analyse de données](https://billpetti.github.io/baseballr/)
+
+- [Utilisé par Vox Pop Labs (Boussole électorale) pour l'analyse de données](https://github.com/voxpoplabs)
+
+- [Utilisé par Google, Facebook, Amazon, etc.](https://makemeanalyst.com/companies-using-r/)
+
+
+
+## Pourquoi R?{.smaller}
+
+### La CLESSN 
+
+![](https://www.clessn.com/assets/img/logo-black.svg){.absolute top=420 left=630 width="30%"}
+![](img/yaduf.png){.absolute top=300 left=0 width="35%"}
 Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)
 
 
@@ -196,9 +199,13 @@ Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)
 
 ::::
 
-## Datagotchi{.smaller}
+## [Datagotchi](https://usa.datagotchi.com){.smaller}
 
 ![](img/datagotchi_usa.png){.absolute top=0 left=850 width="30%"}
+
+::::{.columns}
+
+:::{.column width="80%"}
 
 - Application utilisant des variables lifestyles pour prédire le vote
 - Utiliser R et l'analyse de données à travers ce projet:
@@ -207,6 +214,13 @@ Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)
   - Analyse factorielle
   - Régressions et modèles
   - Visualisation
+
+:::
+
+:::{.column width="20%"}
+:::
+
+::::
 
 ## 
 
@@ -220,18 +234,6 @@ Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)
 
 ::: 
 
-## R : Au-delà de l'analyse de données{.smaller}
-
-- R ne se limite pas à l'analyse statistique, il peut aussi être utilisé pour développer des applications web interactives
-
-![](img/catalogue.png){absolute top=0 left=0 width="20%"}
-
-
-## Mais derrière tout ça... R{.smaller}
-
-- Voici l'envers du décor : 
-
-![](img/catalogue_code.png){absolute top=0 left=0 width="20%"}
 
 ## Analyse textuelle{.smaller}
 
@@ -247,12 +249,31 @@ Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)
 - Analyse d'image
 - Transcription audio
 
+## R : Au-delà de l'analyse de données{.smaller}
+
+- R ne se limite pas à l'analyse statistique, il peut aussi être utilisé pour développer des [applications web interactives](https://mdubel.shinyapps.io/shark-attack/)
+
+![](img/shinygotchi_front.png)
+
+## Après R
+
+### Apprendre R vous permet de comprendre d'autres langages de programmation
+
+- Python
+- Julia
+- SQL
+- JavaScript
+- HTML/CSS
+- Bash 
+
 ## Installer R et RStudio{.smaller}
 
 - C'est quoi la différence entre R et RStudio?
-- R est le moteur, RStudio est l'interface
+- R est le moteur, RStudio est le véhicule
+- R est le langage, RStudio est la feuille de papier
 - RStudio facilite l'utilisation de R
 - RStudio est un IDE (Integrated Development Environment)
+- Personnalisation de l'environnement de travail
 
 <br><br>
 
@@ -261,43 +282,25 @@ Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)
 - [Installer R](https://cran.r-project.org/)
 - [Installer RStudio](https://www.rstudio.com/products/rstudio/download/)
 
-
 ## {background-image="img/rstudio.png"}
 ## {background-image="img/rstudio_script.png"}
 ## {background-image="img/rstudio_console.png"}
 ## {background-image="img/rstudio_files.png"}
 ## {background-image="img/rstudio_env.png"}
 
-<!--
+## Avant de commencer : Concept important {.smaller}
 
-## 
-
-![](img/rstudio.png){.absolute top=0 left=0 width="200%"}
-
-::: {.r-stack}
-
-![](img/rstudio_script.png){.fragment .absolute top=0 left=0 width="200%"}
-
-![](img/rstudio_console.png){.fragment .absolute top=0 left=0 width="200%"}
-
-![](img/rstudio_files.png){.fragment .absolute top=0 left=0 width="200%"}
-
-![](img/rstudio_env.png){.fragment .absolute top=0 left=0 width="200%"}
-
-::: 
-
--->
-
-## Concept important : Le chemin d'arborescence{.smaller}
+### Le chemin d'arborescence
 
 - À tout moment vous devez savoir où vous êtes dans votre ordinateur pour pouvoir importer des données, exporter des graphiques ou mettre des fichiers en relation
-- Votre R est toujours ouvert dans un dossier, et donc vous devez savoir où il est pour pouvoir importer des données
+- Votre R pointe toujours vers un endroit spécifique dans votre ordinateur. Vous devez savoir où pour pouvoir importer des données
 - La fonction `getwd()` dans R permet de savoir où vous êtes
 
-![](img/chemin_arbo.png){.absolute top=400 left=75 width="80%"}
+![](https://habefast.ch/wp-content/uploads/2022/03/habefast-infographies-web-arborescence.png){.absolute top=400 left=75 width="80%"}
 
+## Avant de commencer : Concept important{.smaller}
 
-## Concept important : Planifier avant de coder{.smaller} 
+### Planifier avant de coder
 
 #### La plus grosse erreur est de commencer à coder sans savoir ce que vous voulez faire
 
@@ -309,18 +312,20 @@ Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)
 
 Les possibilités sont infinies, donc il est important de savoir où vous voulez aller
 
+## Avant de commencer : Concept important{.smaller}
 
-## Concept important : Décomposer le problème{.smaller}
+### Décomposer le problème
 
 - Une fois que vous savez ce que vous voulez faire, il est important de décomposer le problème en petites étapes
 - Un script R pour une seule tâche
   - Bien nommer vos scripts pour savoir ce qu'ils font
-  - Exemples: 
-    - `nettoyage_donnees.R`
-    - `graphique.R`
+  - Exemples:
+    - `1_collecte.R`
+    - `2_nettoyage.R`
+    - `3_analyse.R`
+    - `4_graphique.R`
 - Chaque script doit être clair et facile à comprendre
 - Commenter votre code avec des `#`
-
 
 ## Importer des données{.smaller}
 
@@ -369,6 +374,151 @@ Autres fonctions pour importer des données dépendamment du format:
 
 ![](img/df_in_env.png){.absolute top=300 left=150 width="70%"}
 
+## Anatomie d'une ligne de code {.smaller}
+
+Prenons un exemple simple :
+```r
+resultat <- mean(df$age, na.rm = TRUE)
+```
+
+Décomposons cette ligne :
+
+- `resultat` : nom de l'objet où on stocke le résultat
+- `<-` : opérateur d'assignation
+- `mean()` : fonction qui calcule la moyenne
+- `df$age` : variable 'age' du dataframe 'df'
+- `na.rm = TRUE` : argument de la fonction (ignorer les NA)
+
+::::{.notes}
+Cette ligne de code calcule la moyenne de la variable 'age' en ignorant les valeurs manquantes (NA) et stocke le résultat dans un objet nommé 'resultat'
+::::
+
+## Les types de données dans R {.smaller}
+
+### Types de base :
+
+- `numeric` : nombres (avec ou sans décimales)
+```r
+age <- 25        # integer
+taille <- 1.75   # double
+```
+
+- `character` : texte (chaînes de caractères)
+```r
+nom <- "Pierre"
+ville <- 'Montréal'  # simple ou double quotes
+```
+
+- `logical` : TRUE ou FALSE
+```r
+est_etudiant <- TRUE
+a_un_emploi <- FALSE
+```
+
+## Les types de données dans R {.smaller}
+
+### Types spéciaux :
+
+- `factor` : catégories
+```r
+niveau <- factor(c("Débutant", "Intermédiaire", "Avancé"))
+```
+
+- `Date` : dates
+```r
+date <- as.Date("2025-01-14")
+```
+
+- `NA` : valeurs manquantes
+```r
+donnees <- c(1, NA, 3, NA, 5)
+```
+
+## Parenthèses, guillemets et virgules {.smaller}
+
+### Les parenthèses () :
+- Délimitent les arguments d'une fonction
+- Doivent toujours être fermées
+```r
+# Correct
+moyenne <- mean(donnees)
+
+# Incorrect - parenthèse manquante
+moyenne <- mean(donnees
+```
+
+### Les virgules :
+- Séparent les arguments d'une fonction
+```r
+# Correct
+resultat <- sum(1, 2, 3, na.rm = TRUE)
+
+# Incorrect - virgule manquante
+resultat <- sum(1 2 3, na.rm = TRUE)
+```
+
+## Assignation : = vs <- {.smaller}
+
+### L'opérateur <- :
+- Recommandé pour l'assignation de variables
+- Plus clair et explicite
+- Standard dans la communauté R
+```r
+age <- 25
+nom <- "Alice"
+```
+
+### L'opérateur = :
+- Utilisé principalement pour les arguments de fonctions
+- Peut créer de la confusion
+```r
+# Pour les arguments de fonction
+mean(x = donnees, na.rm = TRUE)
+
+# Éviter pour l'assignation
+age = 25  # Fonctionne mais non recommandé
+```
+
+## Messages d'erreur courants {.smaller}
+
+### Erreur de syntaxe
+```r
+# Message d'erreur
+Error: unexpected symbol in "mon code"
+
+# Cause probable
+# Parenthèse ou guillemet manquant
+```
+
+### Objet non trouvé
+```r
+# Message d'erreur
+Error: object 'data' not found
+
+# Causes probables
+# - Faute de frappe dans le nom
+# - Objet non créé
+# - Mauvais working directory
+```
+
+## Messages d'erreur (suite) {.smaller}
+
+### Comment réagir aux erreurs :
+
+1. Ne pas paniquer ! Les erreurs sont normales
+2. Lire attentivement le message d'erreur
+3. Vérifier la ligne indiquée dans le message
+4. Points à vérifier :
+   - Parenthèses fermées ?
+   - Guillemets fermés ?
+   - Virgules aux bons endroits ?
+   - Noms d'objets corrects ?
+   - Package chargé (`library()`) ?
+
+::::{.notes}
+Encourager les étudiants à voir les erreurs comme des opportunités d'apprentissage
+::::
+
 # Codons!
 
 ## Nous allons utiliser le dataframe `swiss`{.smaller}
@@ -391,7 +541,7 @@ nrow(df)
 
 ```
 
-## Analyse rapide d'une variable{.smaller}
+## Analyse rapide d'une variable
 
 ```r
 # Voir le nombre de valeurs pour chaque élément d'une variable
@@ -405,12 +555,10 @@ mean(df$Fertility)
 
 ```
 
-<br>
-
 - `$` permet d'accéder à une variable dans un dataframe.
 - On accède à la variable `Fertility` dans le dataframe `df` avec `df$Fertility`
 
-## Filter et sélectionner des variables{.smaller}
+## Filter et sélectionner des variables
 
 ```r
 # Sélectionner des colonnes 
@@ -458,11 +606,9 @@ print(df_summarized)
 - Éviter les graphiques « spaghetti » 
   - Évitez les lignes trop complexes qui se chevauchent et s'entremêlent
 - Commencer en noir et blanc 
-  - Utilisez les couleurs de manière efficace
+  - Utiliser les couleurs de manière efficace
 
-
-
-## Visualisation avec ggplot2{auto-animate=true .smaller}
+## Visualisation avec ggplot2{auto-animate=true}
 
 ### Initialiser un graphique
 
@@ -474,7 +620,7 @@ ggplot(df, aes(x = Agriculture, y = Fertility, color = Education))
 - `x` et `y` sont les variables à utiliser pour les axes x et y
 - `color` est la variable à utiliser pour la couleur
 
-## Visualisation avec ggplot2{auto-animate=true .smaller}
+## Visualisation avec ggplot2{auto-animate=true}
 
 ### Ajouter un geom_()
 
@@ -489,8 +635,7 @@ ggplot(df, aes(x = Agriculture, y = Fertility, color = Education)) +
   - `geom_bar()` est pour un graphique en barres
   - `geom_histogram()` est pour un histogramme
 
-
-## Visualisation avec ggplot2{auto-animate=true .smaller}
+## Visualisation avec ggplot2{auto-animate=true}
 
 ### Ajouter une échelle de couleur
 
@@ -505,7 +650,7 @@ ggplot(df, aes(x = Agriculture, y = Fertility, color = Education)) +
 - `name` est le nom de la légende
 - Vous pouvez utiliser les hexcodes pour les couleurs
 
-## Visualisation avec ggplot2{auto-animate=true .smaller}
+## Visualisation avec ggplot2{auto-animate=true}
 
 ### Ajouter des titres et des labels
 
@@ -520,7 +665,7 @@ ggplot(df, aes(x = Agriculture, y = Fertility, color = Education)) +
   ) 
 ```
 
-## Visualisation avec ggplot2{auto-animate=true .smaller}
+## Visualisation avec ggplot2{auto-animate=true}
 
 ### Ajouter un thème
 
@@ -540,7 +685,7 @@ ggplot(df, aes(x = Agriculture, y = Fertility, color = Education)) +
 - Il existe plusieurs thèmes prédéfinis dans ggplot2
 - Vous pouvez aussi créer votre propre thème
 
-## Visualisation avec ggplot2{auto-animate=true .smaller}
+## Visualisation avec ggplot2{auto-animate=true}
 
 ### Sauvegarder le graphique
 
@@ -560,7 +705,7 @@ ggsave("nom_du_graphique.png", width = 10, height = 6)
 
 - Vous pouvez spécifier le format du graphique (png, pdf, etc.) ainsi que le chemin pour sauvegarder le graphique
 
-## Visualisation avec ggplot2{auto-animate=true .smaller}
+## Visualisation avec ggplot2{auto-animate=true}
 
 ### Un histogramme de la variable Fertility
 
@@ -575,7 +720,7 @@ ggplot(df, aes(x = Fertility)) +
   theme_minimal()
 ```
 
-## Analyse statistique{.smaller}
+## Analyse statistique
 
 ```r
 # Calculer la corrélation entre Fertility et Agriculture
@@ -592,115 +737,49 @@ modele <- lm(Fertility ~ Agriculture, data = df)
 summary(modele)
 ```
 
-## Bonnes pratiques{.smaller}
+## Bonnes pratiques
 
-- Nommer vos objets de façon explicite
-- Commenter votre code
-- Organiser votre code
+### [style.tidyverse.org](https://style.tidyverse.org/)
 
-![](https://d33wubrfki0l68.cloudfront.net/b88ef926a004b0fce72b2526b0b5c4413666a4cb/24a30/cover.png){.absolute top=0 left=800 width="30%"}
+- Utilisé par la communauté R pour standardiser le style du code
+- Utilisé par [Google](https://google.github.io/styleguide/Rguide.html) 
+- Utilisé par des packages populaires comme [stylr](https://styler.r-lib.org/) et [lintr](https://lintr.r-lib.org/)
 
-## Organiser votre environnement de travail{.smaller}
+## Bonnes pratiques {.smaller}
 
-```bash
-/MonProjet
-├── data/                
-│   ├── raw_data.csv      
-│   └── cleaned_data.csv  
-├── scripts/             
-│   ├── analyse.R         
-│   └── visualization.R   
-├── results/             
-│   ├── summary_statistics.csv  
-│   └── plots/                  
-│       └── data_distribution.png  
-├── docs/                
-│   ├── methodology.md    
-│   ├── references.bib    
-│   └── project_presentation.qmd  
-└── README.md            
-```
+### Règles générales :
 
+- Nommer vos fichiers de manière descriptive
+- Utiliser des minuscules seulement et aucun caractère spécial comme é ou à
+- Si vos fichiers contiennent plusieurs mots, les séparer par des underscores `_`
+- Exemple: `nettoyage_donnees.R`
+- Utiliser des chiffres pour ordonner vos scripts
+- Évitez d'écrire des lignes de code trop longues
+- Utiliser la convention `snake_case` plutôt que `camelCase`
+- Nommez vous dataframe de façon standard. `df_` ou `data_`
 
-## Git{.smaller}
-
-::::{.columns}
-
-:::{.column width=50%}
-
-- Créé par Linus Torvalds en 2005
-- Gestion de version
-- Permet de suivre l'évolution d'un projet
-- Utile pour tout ce qui est texte, incluant les articles et les présentations
-- Enregistre tous les changements faits depuis la création du projet (.git)
-- Reproductibilité et transparence
-
-:::
-
-:::{.column width=50%}
-
-![](img/meme_versions.jpg)
-
-:::
-
-::::
-
-## Git{.smaller}
-
-- Télécharger et installer Git depuis [git-scm.com](git-scm.com)
-
-- Configurer git avant de commencer à l'utiliser
-
-  - Dans le terminal:
+## Organiser votre environnement de travail
 
 ```bash
-git config --global user.name "username"
-git config --global user.email votre@email.com
-git config --global credential.helper store
+/votre_projet
+├── data
+│   ├── processed
+│   │   └── data_clean.csv
+│   └── raw
+│       └── data_raw.csv
+├── docs
+│   └── article
+│       ├── articles.qmd
+│       └── references.bib
+├── R
+│   ├── 2_analysis.R
+│   └── 3_graph.R
+├── README.md
+└── results
+    └── graphs
+        └── 1_bar_graph.png
+ 
 ```
-<!--`-->
-
-## Git{.smaller transition="none"}
-
-![](img/git.png)
-
-## GitHub{.smaller transition="none"}
-
-![](img/git_github.png)
-
-
-## GitHub{.smaller}
-
-- GitHub = Git + Internet
-
-- Plateforme de développement collaboratif
-- Héberge des projets Git
-- Acheté par Microsoft pour 7.5 milliards de dollars
-- Lieu d'entreposage de plusieurs projets open source
-
-## Comment l'utiliser?{.smaller}
-
-1. Cloner un projet existant sur votre ordinateur.
-  - Ce projet est maintenant un dossier sur votre ordinateur. Vous pouvez le modifier, le supprimer, le déplacer, etc.
-
-
-```bash
-git clone https://lien/vers/repo.git
-```
-<!--`-->
-
-2. Modifier le projet, ajouter des fichiers, etc.
-
-```bash
-git pull 
-git add votre_fichier_1 votre_fichier_2
-git commit -m "Message de commit"
-git push
-```
-<!--`-->
-
-
-<!--`-->
 
 ## En apprendre plus{.smaller} 
 
@@ -726,4 +805,4 @@ Quoi faire quand ça ne fonctionne pas?
   - Stackoverflow
   - Stackexchange
 
-## Merci!{.center}
+## Conclusion

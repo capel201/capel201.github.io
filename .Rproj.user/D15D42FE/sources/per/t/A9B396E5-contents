@@ -1,0 +1,471 @@
+---
+title: Initiation à l'analyse de données avec R 
+author: Camille Pelletier<br>Laurence-Olivier M. Foisy
+institute: Université Laval
+format:
+  revealjs:
+    mermaid: 
+      theme: dark
+    theme: simple
+    logo: _SharedFolder_fss_introduction_r/img/logo_CLESSN.png
+    footer: "Analyse de données avec R"
+    transition: slide
+    transition-speed: fast
+---
+
+## Plan de l'atelier{.smaller}
+
+### 9h à 12h 
+- Qu'est-ce que l'analyse de données?
+- Pourquoi R?
+- Introduction à R et RStudio
+
+
+### 12h à 15h
+- Atelier libre avec des mentors de la CLESSN 
+- Exercices avec R
+
+## Objectifs de l'atelier{.smaller}
+
+- Introduire R pour l'analyse de données.
+  - Les dataframes
+  - Les fonctions
+  - Les packages 
+  - Les graphiques
+  - Les statistiques
+
+> Le but est que vous puissiez sortir d'ici avec une compréhension de base de R et que vous soyez capable d'aller chercher des ressources pour continuer à apprendre.
+
+## Pourquoi suivre cet atelier?{.smaller} 
+
+::::{.columns}
+
+:::{.column width="70%"}
+
+- Base solide pour la recherche académique
+
+> Permet également de comprendre la pertinence de l'utilisation d'un logiciel de traitement de données et d'obtenir des outils pour dédramatiser la science des données
+
+:::
+
+:::{.column}
+
+![](_SharedFolder_fss_introduction_r/img/science.png){.absolute top=150 left=800 width="30%"}
+:::
+
+::::
+
+## Pourquoi suivre cet atelier?{.smaller}
+
+<br><br>
+
+### Comprendre le monde autour de nous à travers des données
+
+<br><br>
+
+![](_SharedFolder_fss_introduction_r/img/binoculars.png){.absolute top=430 left=600 width="10%"} 
+
+![](_SharedFolder_fss_introduction_r/img/data.png){.absolute top=300 left=800 width="40%"}
+![](_SharedFolder_fss_introduction_r/img/citizen.jpg){.absolute top=470 left=470 width="10%"}
+
+
+:::{.notes}
+Les données sont partout, mais pas nécessairement compréhensible dans leur forme « raw ». L'analyse de données permet de simplifier ces données pour comprendre et expliquer des phénomènes ou des comportements dans le monde qui nous entoure.
+
+Pouvoir de prédiction: prédire comment certaines variables ou facteurs influencent d’autres variables ou événements. 
+:::
+
+
+## Qu'est-ce que l'analyse de données?{.smaller}
+
+> L'analyse de données vise à explorer, décrire et interpréter des informations recueillies sur les comportements humains, les relations sociales et les phénomènes sociétaux. **Ce processus peut inclure des données quantitatives (comme des données issus de sondages) et des données qualitatives (comme des entretiens ou des observations)**.
+
+::: {.incremental}
+Principales étapes de l'analyse de données :
+
+1. Collecte des données
+2. Préparation des données
+3. Analyse statistique
+:::
+
+
+## Les logiciels d'analyse de données{.smaller}
+
+![](https://upload.wikimedia.org/wikipedia/commons/e/ea/SPSS_logo.svg){.absolute top=400 left=100 width="20%"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/7/79/Stata_logo_med_blue.png){.absolute top=150 left=800 width="20%"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/800px-Python-logo-notext.svg.png){.absolute top=400 left=800 width="20%"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Julia_Programming_Language_Logo.svg/1024px-Julia_Programming_Language_Logo.svg.png){.absolute top=100 left=100 width="20%"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1024px-R_logo.svg.png){.absolute top=200 left=330 width="40%"}
+
+
+## Pourquoi R?{.smaller}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1024px-R_logo.svg.png){.absolute top=0 left=800 width="20%"}
+
+<br><br>
+
+### Open source
+
+- Gratuit
+- Collaboratif
+- Communauté active
+  - Stackoverflow
+  - r-bloggers
+- Adapté aux besoins des utilisateurs
+
+:::{.notes}
+Open source c'est un modèle de développement de logiciels où le code est accessible à tous. Dans un logiciel open source, ce code est publié publiquement, permettant à n'importe qui de le lire, le modifier, le partager, et l'améliorer.
+:::
+
+## Pourquoi R?{.smaller}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1024px-R_logo.svg.png){.absolute top=0 left=800 width="20%"}
+
+<br><br>
+
+### Packages
+
+- Offre une extension des fonctionnalités de base presque infinie
+- Peux répondre à des besoins très spécifiques
+- 21,744 packages sur CRAN (Comprehensive R Archive Network)
+  - Principal dépôt où sont hébergés les packages R
+- Beaucoup plus sur GitHub
+  - En plus de CRAN, de nombreux chercheurs publient leurs packages sur GitHub, une plateforme de partage de code
+
+:::{.notes}
+Chaque tâche spécifique lié à l'analyse de donnéees peut être automatisé et facilité par R. Collègue récemment à la CLESSN catégorisé les code postaux à la main. 
+:::
+
+## Pourquoi R?{.smaller}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1024px-R_logo.svg.png){.absolute top=0 left=800 width="20%"}
+
+<br><br>
+
+### Reproductibilité
+
+- Rendre les analyses reproductibles
+- Permet de partager les analyses
+  - Les scripts R permettent de partager facilement le travail
+- Permet de retracer les erreurs
+- Partager le code
+  - Encourage la transparence et la collaboration dans la recherche
+
+## Pourquoi R?{.smaller}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/1024px-R_logo.svg.png){.absolute top=0 left=800 width="20%"}
+
+<br><br>
+
+### Très utilisé en science sociale
+
+- Beaucoup de ressources
+- Beaucoup de tutoriels orientés vers les sciences sociales
+  - Datacamp
+  - Coursera
+  - Datanovia
+
+#### Bref... important d'utiliser les mêmes outils que les chercheurs dans votre domaine
+
+## La CLESSN{.smaller}
+
+![](https://www.clessn.com/assets/img/logo-black.svg){.absolute top=330 left=630 width="30%"}
+![](_SharedFolder_fss_introduction_r/img/yaduf.png){.absolute top=200 left=0 width="35%"}
+Chaire de leadership en enseignement des sciences sociales numériques (CLESSN)
+
+
+::::{.columns}
+
+:::{.column width="50%"}
+- Titulaire: Yannick Dufresne
+:::
+
+:::{.column width="50%"}
+- Objectif: Développer des compétences en science des données pour les étudiants en sciences sociales à travers des projets de recherche et des formations
+:::
+
+::::
+
+## Datagotchi{.smaller}
+
+![](_SharedFolder_fss_introduction_r/img/datagotchi_usa.png){.absolute top=0 left=850 width="30%"}
+
+- Application utilisant des variables lifestyles pour prédire le vote
+- Utiliser R et l'analyse de données à travers ce projet:
+  - Prototypage en Shiny
+  - Nettoyage des données
+  - Analyse factorielle
+  - Régressions et modèles
+  - Visualisation
+
+## 
+
+![](_SharedFolder_fss_introduction_r/img/datagotchi_graph.png){.absolute top=0 left=0 width="200%"}
+
+::: {.r-stack}
+
+![](_SharedFolder_fss_introduction_r/img/cartogram.png){.fragment .absolute top=0 left=0 width="200%"}
+
+![](_SharedFolder_fss_introduction_r/img/turnout.png){.fragment .absolute top=0 left=0 width="200%"}
+
+::: 
+
+## R : Au-delà de l'analyse de données{.smaller}
+
+- R ne se limite pas à l'analyse statistique, il peut aussi être utilisé pour développer des applications web interactives
+
+![](_SharedFolder_fss_introduction_r/img/catalogue.png){absolute top=0 left=0 width="20%"}
+
+## Mais derrière tout ça... R{.smaller}
+
+- Voici l'envers du décor : 
+
+![](_SharedFolder_fss_introduction_r/img/catalogue_code.png){absolute top=0 left=0 width="20%"}
+
+## Analyse textuelle
+
+- Analyse de ton. 
+  - Est-ce que le texte est positif ou négatif?
+- Catégorisation de texte 
+  - Est-ce que le texte parle de politique, de santé, de sport?
+- Analyse d'image
+- Transcription audio
+
+## Installer R et RStudio
+
+- C'est quoi la différence entre R et RStudio?
+- R est le moteur, RStudio est l'interface
+- RStudio facilite l'utilisation de R
+- RStudio est un IDE (Integrated Development Environment)
+
+## Une fois dans RStudio
+
+Les quatre fenêtres de RStudio
+Comment écrire du code dans RStudio
+
+- Console
+- Environment
+- Files
+- Plots
+
+## Concept important : Le chemin d'arborescence!{.smaller}
+
+<br><br>
+
+> Vous devez savoir où vous êtes dans votre ordinateur pour pouvoir importer des données ou exporter des graphiques. 
+Votre R est toujours ouvert dans un dossier, et donc vous devez savoir où il est pour pouvoir importer des données.
+
+<br><br>
+
+![](_SharedFolder_fss_introduction_r/img/chemin_arbo.png){.absolute top=400 left=75 width="80%"}
+
+## Concepts importants{.smaller} 
+
+Savoir ce que vous voulez faire avant de commencer à écrire du code. La plus grosse erreur est de commencer à écrire du code sans savoir ce que vous voulez faire.
+
+## Importer des données{.smaller}
+
+Les données sont souvent dans des fichiers Excel, CSV, ou autres.
+
+On utilise des fonctions comme read.csv() pour lire les fichiers et on assigne l'opération à un objet.
+
+- `df <- read.csv("chemin/vers/data.csv")`
+- `df <- readxl::read_excel("chemin/vers/data.xlsx")`
+- `df <- readRDS("chemin/vers/data.rds")`
+
+## L'analyse descriptive des données
+
+- Qu'est-ce que c'est?
+
+- table()
+- names()
+- hist()
+- print()
+- summary()
+
+## Manipulation de données{.smaller}
+
+- Tidyverse
+  - dplyr
+  - tidyr
+
+- Plusieurs fonctions pour manipuler les données
+  - filter()
+  - select()
+  - mutate()
+  - group_by()
+  - summarize()
+
+## Représentation graphique des données{.smaller}
+
+### Principes généraux de la visualisation
+
+- Montrer les données
+- Choisir des visualisations appropriées : Quelles informations seront utiles ?
+- Réduire le bruit visuel
+  - Peut déformer les données et être source de distraction
+- Éviter les graphiques « spaghetti »
+- Commencer par du gris
+- Utiliser les couleurs de manière efficace
+- Ratio encre/information
+
+## Représentation graphique des données{.smaller}
+
+- ggplot2
+  - Les layers
+  - Les geom
+- Shiny
+  - Créer des applications interactives
+
+## Analyse statistique
+
+- Les régressions
+- Les tests statistiques
+- Les modèles
+
+## Tableaux de régression
+
+- modelsummary
+
+## Bonnes pratiques
+
+- Comment nommer vos objets
+- Comment commenter votre code
+- Comment organiser votre code
+- Comment partager votre code
+
+## Git{.smaller}
+
+::::{.columns}
+
+:::{.column width=50%}
+
+- Créé par Linus Torvalds en 2005
+- Gestion de version
+- Permet de suivre l'évolution d'un projet
+- Utile pour tout ce qui est texte, incluant les articles et les présentations
+- Enregistre tous les changements faits depuis la création du projet (.git)
+- Reproductibilité et transparence
+
+:::
+
+:::{.column width=50%}
+
+![](img/meme_versions.jpg)
+
+:::
+
+::::
+
+## Important
+
+- Télécharger et installer Git depuis [git-scm.com](git-scm.com)
+
+- Configurer git avant de commencer à l'utiliser
+
+  - Dans le terminal:
+
+```bash
+git config --global user.name "username"
+git config --global user.email votre@email.com
+git config --global credential.helper store
+```
+<!--`-->
+
+## Git{.smaller transition="none"}
+
+![](img/git.png)
+
+## GitHub{.smaller transition="none"}
+
+![](img/git_github.png)
+
+
+## GitHub
+
+- GitHub = Git + Internet
+
+- Plateforme de développement collaboratif
+- Héberge des projets Git
+- Acheté par Microsoft pour 7.5 milliards de dollars
+- Lieu d'entreposage de plusieurs projets open source
+
+## Ajouter vos accès{.smaller}
+
+- Créer un compte GitHub :
+- Générer un token d'accès classique :
+    - Connectez-vous à GitHub et allez dans vos Paramètres.
+    - Dans la section Developer Settings, cliquez sur Personal Access Tokens, puis sur Tokens (classic).
+    - Créez un nouveau token en cliquant sur Generate new token (classic).
+    - Choisissez la durée illimité et donnez tous les accès        
+    - Copiez le token généré, car vous ne pourrez plus le visualiser après avoir quitté cette page.
+    
+- Quand Git demandera un identifiant et un mot de passe, entrez :
+    - Identifiant : votre nom d'utilisateur GitHub.
+    - Mot de passe : collez le token que vous avez généré.
+
+## Comment l'utiliser?{.smaller}
+
+1. Cloner un projet existant sur votre ordinateur.
+  - Ce projet est maintenant un dossier sur votre ordinateur. Vous pouvez le modifier, le supprimer, le déplacer, etc.
+
+
+```bash
+git clone https://lien/vers/repo.git
+```
+<!--`-->
+
+2. Modifier le projet, ajouter des fichiers, etc.
+
+```bash
+git pull 
+git add votre_fichier_1 votre_fichier_2
+git commit -m "Message de commit"
+git push
+```
+<!--`-->
+
+## Organiser votre répertoire et placer vos données{.smaller}
+
+```bash
+/MonProjet
+├── data/                
+│   ├── raw_data.csv      
+│   └── cleaned_data.csv  
+├── scripts/             
+│   ├── analyse.R         
+│   └── visualization.R   
+├── results/             
+│   ├── summary_statistics.csv  
+│   └── plots/                  
+│       └── data_distribution.png  
+├── docs/                
+│   ├── methodology.md    
+│   ├── references.bib    
+│   └── project_presentation.qmd  
+└── README.md            
+```
+<!--`-->
+
+## Apprendre plus de R{.smaller} 
+
+- swirl
+- Datacamp
+- R4DS (R for Data Science)
+- Advanced R
+
+
+## Ressources
+
+Quoi faire quand ça ne fonctionne pas?
+
+- ChatGPT
+- Réessayer ChatGPT
+- La documentation de R
+- Google
+
+## Conclusion
