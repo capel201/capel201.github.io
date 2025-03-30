@@ -17,12 +17,42 @@ format:
     code-overflow: wrap
 ---
 
-## Introduction {.smaller}
+## 
+::: {.center-vertical}
+<div class="research-question">
+
+**<span style="font-size: 1.8em; color: #000000;">Research Question</span>**  
+
+**<span style="font-size: 1.4em; color: #5a5858;">"Are lifestyle habits reliable indicators<br>of abortion attitudes?"</span>**
+
+</div>
+:::
+
+<style>
+.research-question {
+  text-align: center;
+  line-height: 1.6;
+  margin-top: 2em;
+}
+
+.center-vertical {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+</style>
+
+---
+
+## Why is it important? {.smaller}
+
+<br>
+
 ### The Post-Roe Landscape
 - Overturning of Roe v. Wade (2022) as pivotal moment
 - Paradox: Stable public opinion vs heightened political salience
-- Research question:  
-  **"Are lifestyle habits reliable indicators of abortion attitudes?"**
 
 ### Theoretical Puzzle {.smaller}
 - Persistent stability in abortion attitudes vs:
@@ -61,11 +91,9 @@ format:
 - Focus on abortion question respondents (n=2,012)  
 
 ### Analytical Approach
-1. Correlation matrix of 30 variables  
+1. Correlation test of 30 variables  
 2. Multivariate regression analysis  
 3. Interaction testing (377 combinations)  
-
-*Visual: Survey methodology flowchart*
 
 ---
 
