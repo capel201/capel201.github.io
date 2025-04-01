@@ -64,11 +64,11 @@ format:
 
 ## Literature Review {.smaller}
 ### Traditional Determinants
-1. **Religious Factors**  
+1. **Religious Factors** (Adamczyk et al., 2020; Jelen & Wilcox, 2003; Cook 2019)  
    - Affiliation vs. religiosity  
    - Denominational differences (Catholic/Protestant vs Jewish/mainline)  
 
-2. **Socioeconomic Variables**  
+2. **Socioeconomic Variables**  (Legge, 1983; Strickler & Danigelis, 2002)
    - Education gradient paradox  
    - Mediated gender/ethnicity effects  
 
@@ -78,30 +78,37 @@ format:
 
 ---
 
-## New Frontier {.smaller}
-### Lifestyle Politics 
+## Literature Review {.smaller}
+### Emerging Determinants: Lifestyle Politics?  
 
-<br> 
+<div style="margin-bottom: 50px;"></div>
 
-- Cultural polarization manifest in consumption patterns  
-- "Prius vs Pickup Truck" political identities  
-- Theoretical framework: Lifestyle as social identifier  
+- **Consumption as Identity** 
+  - Prius (urban/progressive) vs. Pickup (rural/conservative) polarization  
+
+- **Cultural Sorting**  (DelaPosta et al., 2015)
+  - Leisure activities (craft beer vs hunting) signal ideological alignment  
+
+- **Affective Reinforcement**  
+  - Lifestyle habits crystallize group boundaries  
 
 ---
 
-## Methodology {.smaller}
-### Data Collection
-- **Datagotchi** gamified survey (n=18,879)  
+## Methodology {.smaller transition=none}
+### Data
+- **Datagotchi** web survey (n=18,879)  
+
+::: {.incremental}
+
 - Focus on abortion question respondents (n=2,012)  
-
-### Analytical Approach
-1. Correlation test of 30 variables  
-2. Multivariate regression analysis  
-3. Interaction testing (377 combinations)  
-
+  - DV = Abortion attitudes 
+  - IV = Numerous variables (socioeconomic, political, lifestyle)
+  
+:::
 ---
 
-## Step 1: Correlation Analysis {.smaller}
+## Methodology {.smaller transition=none}
+### Correlation tests (30 most correlated variables) {.smaller}
 
 ::: {style="position: relative; height: 80vh;"}
 
@@ -111,68 +118,69 @@ format:
 
 ---
 
-## Step 1: Correlation Analysis {.smaller transition="fade"}
+## Methodology {.smaller transition=none}
+### Partisanship
 
-**Strongest Correlations** 
+::: {style="position: relative; height: 80vh;"}
 
-- **Partisan ID**  
-  Strong Democrat: +0.35 | Strong Republican: −0.40  
-
-- **Religious Affiliation**  
-  Non-religious: +0.30 | Christian: −0.20 | Protestant: −0.18  
-
-<div style="margin-bottom: 50px;"></div>
-
-**Socioeconomic Patterns**  
-
-- **Education**: High (+0.18) Medium (−0.10) Low (−0.08)  
-- **Income**: High (+0.15) Low (−0.20)  
-
-<div style="margin-bottom: 50px;"></div>
-
-**Lifestyle Markers**  
-
-Urban/Prius (+0.22) vs Rural/Pickup (−0.22)  
+![](img/abortion_correlation_partisanship.png){style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 65%; border: 1px solid #eee; padding: 0.5rem;"}
+:::
 
 ---
 
-## Step 2: Regression Analysis {.smaller trans=fade}
+## Methodology {.smaller transition=none}
+### Religious factors 
 
-:::: {.columns}
+::: {style="position: relative; height: 80vh;"}
 
-::: {.column}
-
-Nothing suprising...
-
-<br>
-
-- **Socioeconomic factors and partisanship drive abortion attitudes**  
-  - Strong Republican ID: -0.365<sup>***</sup>  
-  - Religiosity: -0.139<sup>***</sup>
-  - Muslim affiliation: -0.366<sup>***</sup>  
-  - Jewish affiliation: +0.163<sup>*</sup>  
-  
-:::
-
-::: {.column}
-
-![](img/regression_predictors_focused.png){.r-stretch style="max-width: 120%; padding: 0.5rem; margin-top: 2rem;"}
+![](img/abortion_correlation_plot_religion.png){style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 65%; border: 1px solid #eee; padding: 0.5rem;"}
 
 :::
-
-:::: 
 
 ---
 
-## Step 2: Regression Analysis {.smaller}
+## Methodology {.smaller transition=none}
+### Socioeconomic variables
 
-However most lifestyle variables are not significative...
+::: {style="position: relative; height: 80vh;"}
+
+![](img/abortion_correlation_plot_socioeconomic.png){style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 65%; border: 1px solid #eee; padding: 0.5rem;"}
+
+:::
+
+---
+
+## Methodology {.smaller transition=none}
+### Lifestyle variables
+
+::: {style="position: relative; height: 80vh;"}
+
+![](img/abortion_correlation_plot_lifestyle.png){style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 65%; border: 1px solid #eee; padding: 0.5rem;"}
+:::
+
+---
+
+## Methodology {.smaller transition=none}
+### Regression Analysis
+
+Nothing surprising... classic predictors of abortion attitudes:
+
+::: {style="position: relative; height: 80vh;"}
+
+![](img/regression_classic_predictors.png){style="position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); max-width: 70%; border: 1px solid #eee; padding: 0.5rem;"}
+:::
+---
+
+## Methodology {.smaller transition=none}
+### Regression Analysis
+
+However, the lifestyle variables lose significance...
 
 <div style="margin-bottom: 50px;"></div>
 
 ::: {style="position: relative; height: 100vh;"}
 
-![](img/regression_predictors_lifestyle_not.png){style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); max-width: 65%; border: 1px solid #eee; padding: 0.5rem;"}
+![](img/regression_predictors_lifestyle_not.png){style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); max-width: 70%; border: 1px solid #eee; padding: 0.5rem;"}
 :::
 
 ---
@@ -216,7 +224,6 @@ Our approach followed a multi-step process:
 1. Identify and validate classic predictors
 2. Test interactions with lifestyle variables
 3. Measure effect differences
-4. Analyze significance patterns
 
 ::: {.fragment .fade-in}
 This methodology allows us to isolate how lifestyle factors modify the relationship between established predictors and abortion attitudes.
