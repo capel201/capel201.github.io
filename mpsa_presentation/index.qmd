@@ -56,9 +56,9 @@ format:
 
 ### Theoretical Puzzle {.smaller}
 - Persistent stability in abortion attitudes vs:
-  - Shifting norms on other social issues (same-sex marriage, cannabis)
-  - Growing affective polarization
-  - Emergence of lifestyle politics
+  - Evolving views on other issues (same-sex marriage, cannabis) (Adamczyk et al., 2020)
+  - Growing affective polarization (Iyengar et al., 2019; Iyengar et al., 2012)
+  - Emergence of lifestyle politics (DellaPosta et al., 2015)
 
 ---
 
@@ -78,7 +78,11 @@ format:
 
 ---
 
-## New Frontier: Lifestyle Politics {.smaller}
+## New Frontier {.smaller}
+### Lifestyle Politics 
+
+<br> 
+
 - Cultural polarization manifest in consumption patterns  
 - "Prius vs Pickup Truck" political identities  
 - Theoretical framework: Lifestyle as social identifier  
@@ -97,53 +101,206 @@ format:
 
 ---
 
-## Key Findings {.smaller}
-### Correlation associations
-- Strongest predictors:  
-  - Partisan ID (Dem: +0.35, Rep: -0.40)  
-  - Religiosity (-0.30)  
-  - Lifestyle markers (Urban/Prius +0.22 vs Rural/Pickup -0.22)  
+## Step 1: Correlation Analysis {.smaller}
 
-*Visual: Correlation heatmap (Figure 1)*
+::: {style="position: relative; height: 80vh;"}
 
----
+![](img/abortion_correlation_plot.png){style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 65%; border: 1px solid #eee; padding: 0.5rem;"}
 
-## Regression Analysis {.smaller}
-- Socioeconomic factors dominate main effects:  
-  - Strong Republican ID: -0.365***  
-  - Muslim affiliation: -0.366***  
-  - Jewish affiliation: +0.163*  
-
-- Lifestyle variables gain significance through interactions  
-
-*Visual: Regression coefficients plot (Figure 2)*
+:::
 
 ---
 
-## Interaction Effects {.smaller}
-### Amplification Patterns
-1. **Republican Identity**  
-   - Strengthened by: Hunting (+0.559**), Gun ownership (+0.328***)  
-   - Weakened by: Craft beer consumption (-0.227***)  
+## Step 1: Correlation Analysis {.smaller transition="fade"}
 
-2. **Ethnicity Modifiers**  
-   - Native American: Walking (-0.404***) vs SUV (+0.402*)  
-   - White: Motorcycles (+0.383**) vs Fishing (-0.117*)  
-   
----   
+**Strongest Correlations** 
 
-## Theoretical Implications {.smaller}
-- Lifestyle choices as polarization amplifiers  
-- Cultural "package deals" in political identity  
+- **Partisan ID**  
+  Strong Democrat: +0.35 | Strong Republican: −0.40  
+
+- **Religious Affiliation**  
+  Non-religious: +0.30 | Christian: −0.20 | Protestant: −0.18  
+
+<div style="margin-bottom: 50px;"></div>
+
+**Socioeconomic Patterns**  
+
+- **Education**: High (+0.18) Medium (−0.10) Low (−0.08)  
+- **Income**: High (+0.15) Low (−0.20)  
+
+<div style="margin-bottom: 50px;"></div>
+
+**Lifestyle Markers**  
+
+Urban/Prius (+0.22) vs Rural/Pickup (−0.22)  
+
+---
+
+## Step 2: Regression Analysis {.smaller trans=fade}
+
+:::: {.columns}
+
+::: {.column}
+
+Nothing suprising...
+
+<br>
+
+- **Socioeconomic factors and partisanship drive abortion attitudes**  
+  - Strong Republican ID: -0.365<sup>***</sup>  
+  - Religiosity: -0.139<sup>***</sup>
+  - Muslim affiliation: -0.366<sup>***</sup>  
+  - Jewish affiliation: +0.163<sup>*</sup>  
+  
+:::
+
+::: {.column}
+
+![](img/regression_predictors_focused.png){.r-stretch style="max-width: 120%; padding: 0.5rem; margin-top: 2rem;"}
+
+:::
+
+:::: 
+
+---
+
+## Step 2: Regression Analysis {.smaller}
+
+However most lifestyle variables are not significative...
+
+<div style="margin-bottom: 50px;"></div>
+
+::: {style="position: relative; height: 100vh;"}
+
+![](img/regression_predictors_lifestyle_not.png){style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); max-width: 65%; border: 1px solid #eee; padding: 0.5rem;"}
+:::
+
+---
+
+## Step 3: Interaction Analysis {.smaller}
+
+::: {.callout-note appearance="simple"}
+**How lifestyle variables interact with and modify the effects of classic predictors of abortion attitudes?**
+:::
+
+<div style="margin-bottom: 50px;"></div>
+
+::: {.columns}
+::: {.column width="48%"}
+- Political science has established classic predictors
+- Less is known about how lifestyle factors modify these effects
+- Important for understanding complex attitude formation
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+```{mermaid}
+%%| fig-width: 6
+flowchart TB
+  A[Classic Predictors] --> C[Abortion Support]
+  B[Lifestyle Variables] --> D{Interaction}
+  D --> C
+  A --> D
+```
+:::
+:::
+
+---
+
+## Step 3: Interaction Analysis {.smaller}
+
+Our approach followed a multi-step process:
+
+1. Identify and validate classic predictors
+2. Test interactions with lifestyle variables
+3. Measure effect differences
+4. Analyze significance patterns
+
+::: {.fragment .fade-in}
+This methodology allows us to isolate how lifestyle factors modify the relationship between established predictors and abortion attitudes.
+:::
+
+---
+
+## Step 1: Classic Predictors {.smaller}
+
+We validated 10 classic predictors through preliminary analysis:
+
+
+
+---
+
+## Step 2: Testing Interactions {.smaller}
+
+We systematically tested interactions between:
+
+- 10 classic predictors
+- 47 lifestyle variables
+
+::: {.columns}
+::: {.column width="60%"}
+ hah
+:::
+
+::: {.column width="40%"}
+::: {.callout-tip}
+- 470 separate models
+- Adjusted for multiple comparisons
+- Standardized coefficients for comparison
+:::
+:::
+:::
+
+---
+
+## Step 3: Measuring Effect Differences {.smaller}
+
+<div style="margin-bottom: 50px;"></div>
+
+For each significant interaction, we calculated:
+
+<div style="margin-bottom: 100px;"></div>
+
+$$\Delta_{effect} = |\beta_{classic \times lifestyle} - \beta_{classic}|$$
+
+
+## Step 3: Measuring Effect Differences {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](img/abortion_lifestyle_interactions.png){style="max-width: 100%; padding: 0.5rem;"}
+
+:::
+
+::: {.column width="50%"}
+::: {.callout-important}
+#### Key Findings
+
+- Media consumption had the largest moderating effect on Religious Attendance
+- Exercise frequency significantly modified Religious Attendance effects
+- Partisanship effects varied by diet preferences
+- Social media use changed how Political Ideology predicted support
+:::
+:::
+:::
+
+---
+
+## Step 4: Analyzing Significance Patterns {.smaller}
+
+::: {.incremental}
+1. **Traditional factors remain strong predictors, but...**
+2. **Interaction patterns revealed nuanced attitude formation processes**
+2. **Lifestyle factors seem to modify the effects of classic predictors**
+:::
 
 ---
 
 ## Discussion {.smaller}
-### Contributions
-1. Maps new lifestyle dimension of abortion politics  
-2. Reveals interaction effects > individual predictors  
-3. Demonstrates cultural embedding of policy attitudes  
-
 ### Limitations
 - Non-causal correlational design  
 - Binary abortion measure  
@@ -151,22 +308,8 @@ format:
 
 ---
 
-## Conclusion {.smaller}
-### Key Takeaways
-- Traditional factors remain necessary but insufficient  
-- Lifestyle markers act as polarization multipliers  
-- Abortion attitudes reflect broader cultural cleavages  
-
----
 
 ## Thank You {.center}
-
-Contact: camille.pelletier.12@ulaval.ca
-
----
-
-
-
 
 
 

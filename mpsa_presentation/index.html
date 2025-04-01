@@ -319,6 +319,10 @@
       margin-right: 0; 
     }
   </style>
+  <meta name="mermaid-theme" content="dark">
+  <script src="index_files/libs/quarto-diagram/mermaid.min.js"></script>
+  <script src="index_files/libs/quarto-diagram/mermaid-init.js"></script>
+  <link href="index_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -376,9 +380,9 @@ Camille Pelletier<br>Kassandra Gervasi
 <ul>
 <li>Persistent stability in abortion attitudes vs:
 <ul>
-<li>Shifting norms on other social issues (same-sex marriage, cannabis)</li>
-<li>Growing affective polarization</li>
-<li>Emergence of lifestyle politics</li>
+<li>Evolving views on other issues (same-sex marriage, cannabis) (Adamczyk et al., 2020)</li>
+<li>Growing affective polarization (Iyengar et al., 2019; Iyengar et al., 2012)</li>
+<li>Emergence of lifestyle politics (DellaPosta et al., 2015)</li>
 </ul></li>
 </ul>
 </section>
@@ -406,8 +410,10 @@ Camille Pelletier<br>Kassandra Gervasi
 </ul></li>
 </ol>
 </section>
-<section id="new-frontier-lifestyle-politics" class="slide level2 smaller">
-<h2>New Frontier: Lifestyle Politics</h2>
+<section id="new-frontier" class="slide level2 smaller">
+<h2>New Frontier</h2>
+<h3 id="lifestyle-politics">Lifestyle Politics</h3>
+<p><br></p>
 <ul>
 <li>Cultural polarization manifest in consumption patterns<br>
 </li>
@@ -433,72 +439,208 @@ Camille Pelletier<br>Kassandra Gervasi
 <li>Interaction testing (377 combinations)</li>
 </ol>
 </section>
-<section id="key-findings" class="slide level2 smaller">
-<h2>Key Findings</h2>
-<h3 id="correlation-associations">Correlation associations</h3>
+<section id="step-1-correlation-analysis" class="slide level2 smaller">
+<h2>Step 1: Correlation Analysis</h2>
+<div style="position: relative; height: 80vh;">
+<p><img data-src="img/abortion_correlation_plot.png" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 65%; border: 1px solid #eee; padding: 0.5rem;"></p>
+</div>
+</section>
+<section id="step-1-correlation-analysis-1" class="slide level2 smaller" data-transition="fade">
+<h2>Step 1: Correlation Analysis</h2>
+<p><strong>Strongest Correlations</strong></p>
 <ul>
-<li>Strongest predictors:
+<li><p><strong>Partisan ID</strong><br>
+Strong Democrat: +0.35 | Strong Republican: −0.40</p></li>
+<li><p><strong>Religious Affiliation</strong><br>
+Non-religious: +0.30 | Christian: −0.20 | Protestant: −0.18</p></li>
+</ul>
+<div style="margin-bottom: 50px;">
+
+</div>
+<p><strong>Socioeconomic Patterns</strong></p>
 <ul>
-<li>Partisan ID (Dem: +0.35, Rep: -0.40)<br>
+<li><strong>Education</strong>: High (+0.18) Medium (−0.10) Low (−0.08)<br>
 </li>
-<li>Religiosity (-0.30)<br>
+<li><strong>Income</strong>: High (+0.15) Low (−0.20)</li>
+</ul>
+<div style="margin-bottom: 50px;">
+
+</div>
+<p><strong>Lifestyle Markers</strong></p>
+<p>Urban/Prius (+0.22) vs Rural/Pickup (−0.22)</p>
+</section>
+<section id="step-2-regression-analysis" class="slide level2 smaller" data-trans="fade">
+<h2>Step 2: Regression Analysis</h2>
+<div class="columns">
+<div class="column">
+<p>Nothing suprising…</p>
+<p><br></p>
+<ul>
+<li><strong>Socioeconomic factors and partisanship drive abortion attitudes</strong>
+<ul>
+<li>Strong Republican ID: -0.365<sup>***</sup><br>
 </li>
-<li>Lifestyle markers (Urban/Prius +0.22 vs Rural/Pickup -0.22)</li>
+<li>Religiosity: -0.139<sup>***</sup></li>
+<li>Muslim affiliation: -0.366<sup>***</sup><br>
+</li>
+<li>Jewish affiliation: +0.163<sup>*</sup></li>
 </ul></li>
 </ul>
-<p><em>Visual: Correlation heatmap (Figure 1)</em></p>
+</div><div class="column">
+<img data-src="img/regression_predictors_focused.png" class="r-stretch" style="max-width: 120%; padding: 0.5rem; margin-top: 2rem;">
+</div>
+</div>
 </section>
-<section id="regression-analysis" class="slide level2 smaller">
-<h2>Regression Analysis</h2>
+<section id="step-2-regression-analysis-1" class="slide level2 smaller">
+<h2>Step 2: Regression Analysis</h2>
+<p>However most lifestyle variables are not significative…</p>
+<div style="margin-bottom: 50px;">
+
+</div>
+<div style="position: relative; height: 100vh;">
+<p><img data-src="img/regression_predictors_lifestyle_not.png" style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); max-width: 65%; border: 1px solid #eee; padding: 0.5rem;"></p>
+</div>
+</section>
+<section id="step-3-interaction-analysis" class="slide level2 smaller">
+<h2>Step 3: Interaction Analysis</h2>
+<div class="callout callout-note callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p><strong>How lifestyle variables interact with and modify the effects of classic predictors of abortion attitudes?</strong></p>
+</div>
+</div>
+</div>
+<div style="margin-bottom: 50px;">
+
+</div>
+<div class="columns">
+<div class="column" style="width:48%;">
 <ul>
-<li>Socioeconomic factors dominate main effects:
-<ul>
-<li>Strong Republican ID: -0.365***<br>
-</li>
-<li>Muslim affiliation: -0.366***<br>
-</li>
-<li>Jewish affiliation: +0.163*</li>
-</ul></li>
-<li>Lifestyle variables gain significance through interactions</li>
+<li>Political science has established classic predictors</li>
+<li>Less is known about how lifestyle factors modify these effects</li>
+<li>Important for understanding complex attitude formation</li>
 </ul>
-<p><em>Visual: Regression coefficients plot (Figure 2)</em></p>
+</div><div class="column" style="width:4%;">
+
+</div><div class="column" style="width:48%;">
+<div class="cell" data-reveal="true" data-fig-width="6">
+<div class="cell-output-display">
+<div>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+  A[Classic Predictors] --&gt; C[Abortion Support]
+  B[Lifestyle Variables] --&gt; D{Interaction}
+  D --&gt; C
+  A --&gt; D
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>
-<section id="interaction-effects" class="slide level2 smaller">
-<h2>Interaction Effects</h2>
-<h3 id="amplification-patterns">Amplification Patterns</h3>
+<section id="step-3-interaction-analysis-1" class="slide level2 smaller">
+<h2>Step 3: Interaction Analysis</h2>
+<p>Our approach followed a multi-step process:</p>
 <ol type="1">
-<li><strong>Republican Identity</strong>
-<ul>
-<li>Strengthened by: Hunting (+0.559<strong>), Gun ownership (+0.328</strong>*)<br>
-</li>
-<li>Weakened by: Craft beer consumption (-0.227***)</li>
-</ul></li>
-<li><strong>Ethnicity Modifiers</strong>
-<ul>
-<li>Native American: Walking (-0.404**<em>) vs SUV (+0.402</em>)<br>
-</li>
-<li>White: Motorcycles (+0.383**) vs Fishing (-0.117*)</li>
-</ul></li>
+<li>Identify and validate classic predictors</li>
+<li>Test interactions with lifestyle variables</li>
+<li>Measure effect differences</li>
+<li>Analyze significance patterns</li>
 </ol>
+<div class="fragment fade-in">
+<p>This methodology allows us to isolate how lifestyle factors modify the relationship between established predictors and abortion attitudes.</p>
+</div>
 </section>
-<section id="theoretical-implications" class="slide level2 smaller">
-<h2>Theoretical Implications</h2>
+<section id="step-1-classic-predictors" class="slide level2 smaller">
+<h2>Step 1: Classic Predictors</h2>
+<p>We validated 10 classic predictors through preliminary analysis:</p>
+</section>
+<section id="step-2-testing-interactions" class="slide level2 smaller">
+<h2>Step 2: Testing Interactions</h2>
+<p>We systematically tested interactions between:</p>
 <ul>
-<li>Lifestyle choices as polarization amplifiers<br>
-</li>
-<li>Cultural “package deals” in political identity</li>
+<li>10 classic predictors</li>
+<li>47 lifestyle variables</li>
 </ul>
+<div class="columns">
+<div class="column" style="width:60%;">
+<p>hah</p>
+</div><div class="column" style="width:40%;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Astuce</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>470 separate models</li>
+<li>Adjusted for multiple comparisons</li>
+<li>Standardized coefficients for comparison</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-3-measuring-effect-differences" class="slide level2 smaller">
+<h2>Step 3: Measuring Effect Differences</h2>
+<div style="margin-bottom: 50px;">
+
+</div>
+<p>For each significant interaction, we calculated:</p>
+<div style="margin-bottom: 100px;">
+
+</div>
+<p><span class="math display">\[\Delta_{effect} = |\beta_{classic \times lifestyle} - \beta_{classic}|\]</span></p>
+</section>
+<section id="step-3-measuring-effect-differences-1" class="slide level2 smaller">
+<h2>Step 3: Measuring Effect Differences</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="img/abortion_lifestyle_interactions.png" style="max-width: 100%; padding: 0.5rem;"></p>
+</div><div class="column" style="width:50%;">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Key Findings</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Media consumption had the largest moderating effect on Religious Attendance</li>
+<li>Exercise frequency significantly modified Religious Attendance effects</li>
+<li>Partisanship effects varied by diet preferences</li>
+<li>Social media use changed how Political Ideology predicted support</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-4-analyzing-significance-patterns" class="slide level2 smaller">
+<h2>Step 4: Analyzing Significance Patterns</h2>
+<div>
+<ol type="1">
+<li class="fragment"><strong>Traditional factors remain strong predictors, but…</strong></li>
+<li class="fragment"><strong>Interaction patterns revealed nuanced attitude formation processes</strong></li>
+<li class="fragment"><strong>Lifestyle factors seem to modify the effects of classic predictors</strong></li>
+</ol>
+</div>
 </section>
 <section id="discussion" class="slide level2 smaller">
 <h2>Discussion</h2>
-<h3 id="contributions">Contributions</h3>
-<ol type="1">
-<li>Maps new lifestyle dimension of abortion politics<br>
-</li>
-<li>Reveals interaction effects &gt; individual predictors<br>
-</li>
-<li>Demonstrates cultural embedding of policy attitudes</li>
-</ol>
 <h3 id="limitations">Limitations</h3>
 <ul>
 <li>Non-causal correlational design<br>
@@ -508,23 +650,8 @@ Camille Pelletier<br>Kassandra Gervasi
 <li>Sample size constraints</li>
 </ul>
 </section>
-<section id="conclusion" class="slide level2 smaller">
-<h2>Conclusion</h2>
-<h3 id="key-takeaways">Key Takeaways</h3>
-<ul>
-<li>Traditional factors remain necessary but insufficient<br>
-</li>
-<li>Lifestyle markers act as polarization multipliers<br>
-</li>
-<li>Abortion attitudes reflect broader cultural cleavages</li>
-</ul>
-</section>
 <section id="thank-you" class="slide level2 center">
 <h2>Thank You</h2>
-<p>Contact: camille.pelletier.12@ulaval.ca</p>
-</section>
-<section class="slide level2">
-
 
 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/90/Ulaval_Shield.svg/800px-Ulaval_Shield.svg.png" class="slide-logo r-stretch"><div class="footer footer-default">
 
