@@ -17,6 +17,57 @@ format:
     code-overflow: wrap
 ---
 
+## Why is it important? {.smaller}
+
+<div style="margin-bottom: 50px;"></div>
+
+- Overturning of Roe v. Wade (2022) as pivotal moment
+- Paradox: Stable public opinion vs heightened political salience
+
+<div style="margin-bottom: 50px;"></div>
+
+### Theoretical Puzzle {.smaller}
+- Persistent stability in abortion attitudes vs:
+  - Evolving views on other issues (same-sex marriage, cannabis) (Adamczyk et al., 2020)
+  - Growing affective polarization (Iyengar et al., 2019; Iyengar et al., 2012)
+  - Emergence of lifestyle politics (DellaPosta et al., 2015)
+
+---
+
+## Literature Review {.smaller transition=none}
+### Classic Determinants  
+
+- **Religious Factors** (Jelen & Wilcox, 2003; Cook, 2019)  
+  - **Affiliation**: Denominational differences (Catholic/Protestant vs Jewish/mainline)  
+  - **Religiosity**: Outweighs affiliation differences (Lynxwiler, 1999; Wilcox, 1992)  
+
+- **Socioeconomic Variables** 
+  - **Education & Income**: Socioeconomic privilege → abortion rights support (Granberg & Granberg, 1980)  
+  
+- **Political Alignment** 
+  - **Partisan sorting**: Liberal/Democrat vs. Conservative/Republican (Hess & Rueb, 2005)  
+  - **Bidirectional relationship**: Abortion attitudes drive party switching (e.g., 1992 pro-choice Republicans; Abramowitz, 1995)   
+  
+<!--- peut-être bouger la slide sur le fait que les attitudes sur l'avortement sont stables ici?--->
+
+---
+
+## Literature Review {.smaller}
+### Emerging Determinants: Lifestyle Politics?  
+
+<div style="margin-bottom: 50px;"></div>
+
+- **Consumption as Identity** 
+  - Prius (urban/progressive) vs. Pickup (rural/conservative) polarization  
+
+- **Cultural Sorting**  (DelaPosta et al., 2015)
+  - Leisure activities (craft beer vs hunting) signal ideological alignment  
+
+- **Affective Reinforcement**  
+  - Lifestyle habits crystallize group boundaries  
+  
+---
+
 ## 
 ::: {.center-vertical}
 <div class="research-question">
@@ -46,54 +97,6 @@ format:
 
 ---
 
-## Why is it important? {.smaller}
-
-<br>
-
-### The Post-Roe Landscape
-- Overturning of Roe v. Wade (2022) as pivotal moment
-- Paradox: Stable public opinion vs heightened political salience
-
-### Theoretical Puzzle {.smaller}
-- Persistent stability in abortion attitudes vs:
-  - Evolving views on other issues (same-sex marriage, cannabis) (Adamczyk et al., 2020)
-  - Growing affective polarization (Iyengar et al., 2019; Iyengar et al., 2012)
-  - Emergence of lifestyle politics (DellaPosta et al., 2015)
-
----
-
-## Literature Review {.smaller}
-### Traditional Determinants
-1. **Religious Factors** (Adamczyk et al., 2020; Jelen & Wilcox, 2003; Cook 2019)  
-   - Affiliation vs. religiosity  
-   - Denominational differences (Catholic/Protestant vs Jewish/mainline)  
-
-2. **Socioeconomic Variables**  (Legge, 1983; Strickler & Danigelis, 2002)
-   - Education gradient paradox  
-   - Mediated gender/ethnicity effects  
-
-3. **Political Alignment**  
-   - Partisan sorting since 1980s  
-   - Bidirectional relationship with ideology  
-
----
-
-## Literature Review {.smaller}
-### Emerging Determinants: Lifestyle Politics?  
-
-<div style="margin-bottom: 50px;"></div>
-
-- **Consumption as Identity** 
-  - Prius (urban/progressive) vs. Pickup (rural/conservative) polarization  
-
-- **Cultural Sorting**  (DelaPosta et al., 2015)
-  - Leisure activities (craft beer vs hunting) signal ideological alignment  
-
-- **Affective Reinforcement**  
-  - Lifestyle habits crystallize group boundaries  
-
----
-
 ## Methodology {.smaller transition=none}
 ### Data
 - **Datagotchi** web survey (n=18,879)  
@@ -102,13 +105,14 @@ format:
 
 - Focus on abortion question respondents (n=2,012)  
   - DV = Abortion attitudes 
-  - IV = Numerous variables (socioeconomic, political, lifestyle)
+  - IV = Socioeconomic, political, and lifestyle variables
+    - Hunting frequency, craft beer consumption, etc.
   
 :::
 ---
 
 ## Methodology {.smaller transition=none}
-### Correlation tests (30 most correlated variables) {.smaller}
+### Correlation tests
 
 ::: {style="position: relative; height: 80vh;"}
 
@@ -134,7 +138,6 @@ format:
 ::: {style="position: relative; height: 80vh;"}
 
 ![](img/abortion_correlation_plot_religion.png){style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 65%; border: 1px solid #eee; padding: 0.5rem;"}
-
 :::
 
 ---
@@ -183,86 +186,39 @@ However, the lifestyle variables lose significance...
 ![](img/regression_predictors_lifestyle_not.png){style="position: absolute; top: 30%; left: 50%; transform: translate(-50%, -50%); max-width: 70%; border: 1px solid #eee; padding: 0.5rem;"}
 :::
 
----
 
-## Step 3: Interaction Analysis {.smaller}
+## Methodology
+### Interaction Analysis
 
-::: {.callout-note appearance="simple"}
-**How lifestyle variables interact with and modify the effects of classic predictors of abortion attitudes?**
-:::
+<div style="margin-bottom: 120px;"></div>
 
-<div style="margin-bottom: 50px;"></div>
 
-::: {.columns}
-::: {.column width="48%"}
-- Political science has established classic predictors
-- Less is known about how lifestyle factors modify these effects
-- Important for understanding complex attitude formation
-:::
-
-::: {.column width="4%"}
-:::
-
-::: {.column width="48%"}
-```{mermaid}
-%%| fig-width: 6
-flowchart TB
-  A[Classic Predictors] --> C[Abortion Support]
-  B[Lifestyle Variables] --> D{Interaction}
-  D --> C
-  A --> D
-```
-:::
-:::
+> Can lifestyle variables modify the effects of classic predictors of abortion attitudes?
 
 ---
 
-## Step 3: Interaction Analysis {.smaller}
+## Methodology {.smaller transition=none}
+### Interaction Analysis
 
-Our approach followed a multi-step process:
-
-1. Identify and validate classic predictors
-2. Test interactions with lifestyle variables
-3. Measure effect differences
-
-::: {.fragment .fade-in}
-This methodology allows us to isolate how lifestyle factors modify the relationship between established predictors and abortion attitudes.
-:::
-
----
-
-## Step 1: Classic Predictors {.smaller}
-
-We validated 10 classic predictors through preliminary analysis:
-
-
-
----
-
-## Step 2: Testing Interactions {.smaller}
-
-We systematically tested interactions between:
-
-- 10 classic predictors
-- 47 lifestyle variables
-
-::: {.columns}
-::: {.column width="60%"}
- hah
-:::
+:::: {.columns}
 
 ::: {.column width="40%"}
-::: {.callout-tip}
-- 470 separate models
-- Adjusted for multiple comparisons
-- Standardized coefficients for comparison
+
+We tested interactions between our 10 main predictors and 47 lifestyle variables:
+
 :::
+
+::: {.column width="60%"}
+
+![](img/regression_classic_predictors.png){style="max-width: 100%; padding: 0.5rem;"}
 :::
-:::
+
+::::
 
 ---
 
-## Step 3: Measuring Effect Differences {.smaller}
+## Methodology {.smaller transition=none}
+### Interaction Analysis
 
 <div style="margin-bottom: 50px;"></div>
 
@@ -271,39 +227,22 @@ For each significant interaction, we calculated:
 <div style="margin-bottom: 100px;"></div>
 
 $$\Delta_{effect} = |\beta_{classic \times lifestyle} - \beta_{classic}|$$
-
-
-## Step 3: Measuring Effect Differences {.smaller}
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-![](img/abortion_lifestyle_interactions.png){style="max-width: 100%; padding: 0.5rem;"}
-
-:::
-
-::: {.column width="50%"}
-::: {.callout-important}
-#### Key Findings
-
-- Media consumption had the largest moderating effect on Religious Attendance
-- Exercise frequency significantly modified Religious Attendance effects
-- Partisanship effects varied by diet preferences
-- Social media use changed how Political Ideology predicted support
-:::
-:::
-:::
-
 ---
 
-## Step 4: Analyzing Significance Patterns {.smaller}
+##
+
+::: {style="display: flex; justify-content: center; align-items: center; height: 95vh;"}
+![](img/abortion_lifestyle_interactions.png){style="max-width: 90%;"}
+:::
+
+## Conclusion {.smaller}
 
 ::: {.incremental}
 1. **Traditional factors remain strong predictors, but...**
 2. **Interaction patterns revealed nuanced attitude formation processes**
 2. **Lifestyle factors seem to modify the effects of classic predictors**
 :::
+
 
 ---
 
