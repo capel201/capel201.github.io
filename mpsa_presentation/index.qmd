@@ -17,25 +17,7 @@ format:
     code-overflow: wrap
 ---
 
-## Why is it important? {.smaller}
-
-<div style="margin-bottom: 50px;"></div>
-
-- Overturning of Roe v. Wade (2022) as pivotal moment
-- Paradox: Stable public opinion vs heightened political salience
-
-<div style="margin-bottom: 50px;"></div>
-
-### Theoretical Puzzle {.smaller}
-- Persistent stability in abortion attitudes vs:
-  - Evolving views on other issues (same-sex marriage, cannabis) (Adamczyk et al., 2020)
-  - Growing affective polarization (Iyengar et al., 2019; Iyengar et al., 2012)
-  - Emergence of lifestyle politics (DellaPosta et al., 2015)
-
----
-
-## Literature Review {.smaller transition=none}
-### Classic Determinants  
+## Classic Determinants {.smaller}  
 
 - **Religious Factors** (Jelen & Wilcox, 2003; Cook, 2019)  
   - **Affiliation**: Denominational differences (Catholic/Protestant vs Jewish/mainline)  
@@ -48,25 +30,58 @@ format:
   - **Partisan sorting**: Liberal/Democrat vs. Conservative/Republican (Hess & Rueb, 2005)  
   - **Bidirectional relationship**: Abortion attitudes drive party switching (e.g., 1992 pro-choice Republicans; Abramowitz, 1995)   
   
-<!--- peut-être bouger la slide sur le fait que les attitudes sur l'avortement sont stables ici?--->
+---
+
+## Theoretical Puzzle {.smaller}
+
+<div style="margin-bottom: 100px;"></div>
+
+::: {.fragment .fade-in style="margin-top: 20px; text-align: center;"}
+**Despite numerous shifts in political discourse...**
+:::
+
+<div style="margin-bottom: 50px;"></div>
+
+::: {.fragment .fade-in style="margin-top: 15px; padding: 15px; background-color: rgba(245, 245, 245, 0.7); border-left: 5px solid #3498db; border-radius: 5px; margin-bottom: 25px;"}
+The core predictors of abortion attitudes have remained relatively stable over time.
+:::
+
+<div style="margin-bottom: 50px;"></div>
+
+::: {.fragment .fade-in style="margin-left: 40px;"}
+
+**Contrasting with**:
+
+- Evolving views on other issues (same-sex marriage, cannabis) (Adamczyk et al., 2020)
+:::
 
 ---
 
-## Literature Review {.smaller}
-### Emerging Determinants: Lifestyle Politics?  
+## Emerging Determinants {.smaller}
+### Lifestyle Politics? 
 
 <div style="margin-bottom: 30px;"></div>
 
-- **Political Polarization Context**
-  - Growing partisan divide on abortion policy (Abramowitz & Saunders, 2008)
-  - Ideological and affective polarization intensifying social identities (Mason, 2018)
+::: {.fragment .fade-in}
 
-- **Why Study Lifestyle Habits?**
-  - Reflect deeper ideological alignments in everyday choices (Husic-Mehmedovic et al., 2015)
-  - Reveal "lifestyle politics" where non-political choices become political signals (DellaPosta et al., 2015; Ouellet, 2024)
-    - May provide more precise indicators of abortion attitudes as polarization increases  
-  
----
+**Political Polarization Context**
+
+- Growing partisan divide on abortion policy (Abramowitz & Saunders, 2008)
+- Ideological polarization intensifying social identities (Mason, 2018)
+- Affective polarization increasing social distance (Iyengar et al., 2012, 2019)
+
+:::
+
+::: {.fragment .fade-in style="margin-top: 30px;"}
+
+**Why Study Lifestyle Habits?**
+
+- Emergence of lifestyle politics as analytical framework (DellaPosta et al., 2015)
+- Reflect deeper ideological alignments in everyday choices (Husic-Mehmedovic et al., 2015)
+  - Non-political choices becoming political signals 
+
+:::
+
 
 ## 
 ::: {.center-vertical}
@@ -99,6 +114,9 @@ format:
 
 ## Methodology {.smaller transition=none}
 ### Data
+
+<div style="margin-bottom: 50px;"></div>
+
 - **Datagotchi** web survey (n=18,879)  
 
 ::: {.incremental}
@@ -106,7 +124,7 @@ format:
 - Focus on abortion question respondents (n=2,012)  
   - DV = Abortion attitudes 
   - IV = Socioeconomic, political, and lifestyle variables
-    - Hunting frequency, craft beer consumption, etc.
+    - (e.g. Hunting frequency, mode of transportation, etc.)
   
 :::
 ---
@@ -172,6 +190,7 @@ Nothing surprising... classic predictors of abortion attitudes:
 
 ![](img/regression_classic_predictors.png){style="position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); max-width: 70%; border: 1px solid #eee; padding: 0.5rem;"}
 :::
+
 ---
 
 ## Methodology {.smaller transition=none}
@@ -230,7 +249,7 @@ $$\Delta_{effect} = |\beta_{classic \times lifestyle} - \beta_{classic}|$$
 <div style="margin-bottom: 60px;"></div>
 
 ::: {.callout-note style="margin-top: 30px; border-radius: 12px; max-width: 85%; margin-left: auto; margin-right: auto;"}
-**Difference Score Effect**: Calculated by comparing the classic model (main predictors of abortion) with the interaction model (classic model × lifestyle variables).
+**Difference Score Effect**: Compared the classic model (main predictors of abortion) with the interaction model (classic model × lifestyle variables).
 :::
 
 ---
