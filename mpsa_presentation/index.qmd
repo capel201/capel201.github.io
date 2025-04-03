@@ -55,16 +55,16 @@ format:
 ## Literature Review {.smaller}
 ### Emerging Determinants: Lifestyle Politics?  
 
-<div style="margin-bottom: 50px;"></div>
+<div style="margin-bottom: 30px;"></div>
 
-- **Consumption as Identity** 
-  - Prius (urban/progressive) vs. Pickup (rural/conservative) polarization  
+- **Political Polarization Context**
+  - Growing partisan divide on abortion policy (Abramowitz & Saunders, 2008)
+  - Ideological and affective polarization intensifying social identities (Mason, 2018)
 
-- **Cultural Sorting**  (DelaPosta et al., 2015)
-  - Leisure activities (craft beer vs hunting) signal ideological alignment  
-
-- **Affective Reinforcement**  
-  - Lifestyle habits crystallize group boundaries  
+- **Why Study Lifestyle Habits?**
+  - Reflect deeper ideological alignments in everyday choices (Husic-Mehmedovic et al., 2015)
+  - Reveal "lifestyle politics" where non-political choices become political signals (DellaPosta et al., 2015; Ouellet, 2024)
+    - May provide more precise indicators of abortion attitudes as polarization increases  
   
 ---
 
@@ -220,13 +220,19 @@ We tested interactions between our 10 main predictors and 47 lifestyle variables
 ## Methodology {.smaller transition=none}
 ### Interaction Analysis
 
-<div style="margin-bottom: 50px;"></div>
+<div style="margin-bottom: 40px;"></div>
 
 For each significant interaction, we calculated:
 
-<div style="margin-bottom: 100px;"></div>
+<div style="margin-bottom: 40px;"></div>
 
 $$\Delta_{effect} = |\beta_{classic \times lifestyle} - \beta_{classic}|$$
+<div style="margin-bottom: 60px;"></div>
+
+::: {.callout-note style="margin-top: 30px; border-radius: 12px; max-width: 85%; margin-left: auto; margin-right: auto;"}
+**Difference Score Effect**: Calculated by comparing the classic model (main predictors of abortion) with the interaction model (classic model × lifestyle variables).
+:::
+
 ---
 
 ##
@@ -235,22 +241,51 @@ $$\Delta_{effect} = |\beta_{classic \times lifestyle} - \beta_{classic}|$$
 ![](img/abortion_lifestyle_interactions.png){style="max-width: 90%;"}
 :::
 
+## Results {.smaller}
+
+:::: {.columns}
+::: {.column width="50%"}
+- **Strong Republican Identity**
+  - Craft Beer Consumption: Weakens relationship (-0.139**)
+  - Prius Ownership: Weakens relationship (-0.139***)
+- **Soft Republican Identity**
+  - Hunting Frequency: Strengthens relationship (0.559**)
+  - Motorized Activities: Strengthens relationship (0.476***)
+ 
+:::
+
+
+::: {.column width="50%"}
+
+- **Religiosity**
+  - Craft Beer Consumption: Weakens relationship (-0.132*)
+  - Video Game Playing: Weakens relationship (-0.057*)
+
+:::
+::::
+
+
+
 ## Conclusion {.smaller}
 
 ::: {.incremental}
 1. **Traditional factors remain strong predictors, but...**
-2. **Interaction patterns revealed nuanced attitude formation processes**
 2. **Lifestyle factors seem to modify the effects of classic predictors**
 :::
 
+<div style="margin-bottom: 60px;"></div>
 
+::: {.callout-note style="margin-top: 30px; border-radius: 12px; max-width: 85%; margin-left: auto; margin-right: auto;"}
+While traditionally conservative lifestyle activities appear to intensify the relationship, progressive activities tend to moderate it.
+:::
+ 
 ---
 
 ## Discussion {.smaller}
 ### Limitations
-- Non-causal correlational design  
-- Binary abortion measure  
-- Sample size constraints  
+- Wording of our survey question 
+
+Comments/critiques on our methodology?
 
 ---
 
