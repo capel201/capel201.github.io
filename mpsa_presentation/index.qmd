@@ -116,17 +116,17 @@ The core predictors of abortion attitudes have remained relatively stable over t
 ### Data
 
 <div style="margin-bottom: 50px;"></div>
-
 - **Datagotchi** web survey (n=18,879)  
 
 ::: {.incremental}
 
 - Focus on abortion question respondents (n=2,012)  
-  - DV = Abortion attitudes 
+  - DV = Abortion attitudes <span style="position: relative;"><span style="position: absolute; top: -2px; left: 60px; color: #e74c3c; font-style: italic; white-space: nowrap;">"Should abortion be banned?"</span></span>
   - IV = Socioeconomic, political, and lifestyle variables
     - (e.g. Hunting frequency, mode of transportation, etc.)
   
 :::
+
 ---
 
 ## Methodology {.smaller transition=none}
@@ -241,7 +241,7 @@ We tested interactions between our 10 main predictors and 47 lifestyle variables
 
 <div style="margin-bottom: 40px;"></div>
 
-For each significant interaction, we calculated:
+For each interaction, we calculated:
 
 <div style="margin-bottom: 40px;"></div>
 
@@ -288,26 +288,21 @@ $$\Delta_{effect} = |\beta_{classic \times lifestyle} - \beta_{classic}|$$
 ## Conclusion {.smaller}
 
 ::: {.incremental}
-1. **Traditional factors remain strong predictors, but...**
-2. **Lifestyle factors seem to modify the effects of classic predictors**
+- **Traditional factors remain strong predictors, but...**
+- **Lifestyle factors seem to have predictive power on abortion attitudes**
+  - Specifically when interacting with strong predictors of abortion attitudes
+  
 :::
 
-<div style="margin-bottom: 60px;"></div>
+::: {.incremental}
+- **Limitations**
+  - Wording of our survey question 
+  - Comments/critiques on our methodology?
 
-::: {.callout-note style="margin-top: 30px; border-radius: 12px; max-width: 85%; margin-left: auto; margin-right: auto;"}
-While traditionally conservative lifestyle activities appear to intensify the relationship, progressive activities tend to moderate it.
 :::
+
  
 ---
-
-## Discussion {.smaller}
-### Limitations
-- Wording of our survey question 
-
-Comments/critiques on our methodology?
-
----
-
 
 ## Thank You {.center}
 
