@@ -1,7 +1,7 @@
 ---
 title: "Beyond Church and State" 
 subtitle: "Investigating Attitudes on Abortion in the 2024 US Elections"
-author: Camille Pelletier<br>Kassandra Gervasi
+author: Camille Pelletier<br>Kassandra Gervasi<br>Laurence-Olivier M. Foisy<br>Jérémie Drouin<br>Étienne Proulx<br>Yannick Dufresne
 institute: Université Laval
 lang: fr
 from: markdown+emoji
