@@ -128,7 +128,7 @@ format:
 <div style="margin-bottom: 20px;"></div>
 
   - IV = Socioeconomic, political, and lifestyle variables
-    - (e.g. Hunting frequency, mode of transportation, etc.)
+    - (e.g. mode of transportation, hunting frequency, diet habits etc.)
     
 :::
 
@@ -269,7 +269,7 @@ $$\Delta_{effect} = |\beta_{classic \times lifestyle} - \beta_{classic}|$$
 ::: {.column width="50%"}
 - **Strong Republican Identity**
   - Drinking Craft Beer: Weakens the negative relationship (-0.139**)
-  - Prius Ownership: Weakens the negative relationship (-0.139***)
+  - Owning Prius: Weakens the negative relationship (-0.139***)
 - **Soft Republican Identity**
   - Hunting Frequency: Strengthens the negative relationship (0.559**)
   - Motorized Activities: Strengthens the negative relationship (0.476***)
@@ -295,31 +295,44 @@ $$\Delta_{effect} = |\beta_{classic \times lifestyle} - \beta_{classic}|$$
 ::: {.incremental}
 - **Traditional factors remain strong predictors, but...**
 
-<div style="margin-bottom: 30px;"></div>
+<div style="margin-bottom: 20px;"></div>
 
-- **Lifestyle factors seem to have predictive power on abortion attitudes**
-  - Specifically when interacting with strong predictors of abortion attitudes
+- **Lifestyle factors seem to have an effect on abortion attitudes**
+  - Specifically when interacting with « classic » predictors
   
 :::
 
-<div style="margin-bottom: 30px;"></div>
+<div style="margin-bottom: 20px;"></div>
 
 ::: {.incremental}
 
 - **Limitations**
-
   - Wording of our DV (single item measuring abortion attitudes)
-    - Abortion attitudes are more complex and often depend on the context
+  - Abortion attitudes are more complex and often depend on the context
+  - A question battery would have been preferable 
 
-<div style="margin-bottom: 30px;"></div>
+<div style="margin-bottom: 20px;"></div>
 
 - **Comments/critiques on our methodology?**
+  - Novel approach to interaction analysis between lifestyle and predictors of abortion attitudes 
+  - Does our approach adequately address the contextual nature of these relationships?
 
 :::
  
 ---
 
 ## Thank You {.center}
+
+<div style="margin-top: 80px;"></div>
+<div style="text-align: center; font-size: 1.2em;">
+
+Camille Pelletier
+<span style="font-size: 0.9em; color: #0066cc;">camille.pelletier.12@ulaval.ca</span>
+
+<div style="margin-top: 30px;"></div>
+
+Kassandra Gervasi
+<span style="font-size: 0.9em; color: #0066cc;">kassandra.gervasi@umontreal.ca</span>
 
 
 
