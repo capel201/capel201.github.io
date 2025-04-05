@@ -6,10 +6,9 @@ institute: Université Laval
 lang: fr
 from: markdown+emoji
 format:
-  revealjs:
+  clean-revealjs:
     mermaid: 
       theme: dark
-    theme: simple
     logo: https://upload.wikimedia.org/wikipedia/en/thumb/9/90/Ulaval_Shield.svg/800px-Ulaval_Shield.svg.png
     transition: slide
     transition-speed: fast
@@ -42,17 +41,17 @@ format:
 
 <div style="margin-bottom: 50px;"></div>
 
-::: {.fragment .fade-in style="margin-top: 15px; padding: 15px; background-color: rgba(245, 245, 245, 0.7); border-left: 5px solid #3498db; border-radius: 5px; margin-bottom: 25px;"}
-The core predictors of abortion attitudes have remained relatively stable over time.
+::: {.fragment .fade-in style="margin-top: 20px; text-align: center;"}
+- The core predictors of abortion attitudes have remained relatively stable over time.
 :::
 
 <div style="margin-bottom: 50px;"></div>
 
-::: {.fragment .fade-in style="margin-left: 40px;"}
-
+::: {.fragment .fade-in style="margin-top: 20px; text-align: center;"}
 **Contrasting with**:
 
 - Evolving views on other issues (same-sex marriage, cannabis) (Adamczyk et al., 2020)
+
 :::
 
 ---
@@ -121,15 +120,21 @@ The core predictors of abortion attitudes have remained relatively stable over t
 ::: {.incremental}
 
 - Focus on abortion question respondents (n=2,012)  
-  - DV = Abortion attitudes <span style="position: relative;"><span style="position: absolute; top: -2px; left: 60px; color: #e74c3c; font-style: italic; white-space: nowrap;">"Should abortion be banned?"</span></span>
+
+<div style="margin-bottom: 20px;"></div>
+
+- DV = Abortion attitudes <span style="position: relative;"><span style="position: absolute; top: -2px; left: 60px; color: #e74c3c; font-style: italic; white-space: nowrap;">"Should abortion be banned?"</span></span>
+
+<div style="margin-bottom: 20px;"></div>
+
   - IV = Socioeconomic, political, and lifestyle variables
     - (e.g. Hunting frequency, mode of transportation, etc.)
-  
+    
 :::
 
 ---
 
-## Methodology {.smaller transition=none}
+## Results {.smaller transition=none}
 ### Correlation tests
 
 ::: {style="position: relative; height: 80vh;"}
@@ -140,7 +145,7 @@ The core predictors of abortion attitudes have remained relatively stable over t
 
 ---
 
-## Methodology {.smaller transition=none}
+## Results {.smaller transition=none}
 ### Partisanship
 
 ::: {style="position: relative; height: 80vh;"}
@@ -150,7 +155,7 @@ The core predictors of abortion attitudes have remained relatively stable over t
 
 ---
 
-## Methodology {.smaller transition=none}
+## Results {.smaller transition=none}
 ### Religious factors 
 
 ::: {style="position: relative; height: 80vh;"}
@@ -160,7 +165,7 @@ The core predictors of abortion attitudes have remained relatively stable over t
 
 ---
 
-## Methodology {.smaller transition=none}
+## Results {.smaller transition=none}
 ### Socioeconomic variables
 
 ::: {style="position: relative; height: 80vh;"}
@@ -171,7 +176,7 @@ The core predictors of abortion attitudes have remained relatively stable over t
 
 ---
 
-## Methodology {.smaller transition=none}
+## Results {.smaller transition=none}
 ### Lifestyle variables
 
 ::: {style="position: relative; height: 80vh;"}
@@ -181,7 +186,7 @@ The core predictors of abortion attitudes have remained relatively stable over t
 
 ---
 
-## Methodology {.smaller transition=none}
+## Results {.smaller transition=none}
 ### Regression Analysis
 
 Nothing surprising... classic predictors of abortion attitudes:
@@ -193,7 +198,7 @@ Nothing surprising... classic predictors of abortion attitudes:
 
 ---
 
-## Methodology {.smaller transition=none}
+## Results {.smaller transition=none}
 ### Regression Analysis
 
 However, the lifestyle variables lose significance...
@@ -206,7 +211,7 @@ However, the lifestyle variables lose significance...
 :::
 
 
-## Methodology
+## Results {.smaller}
 ### Interaction Analysis
 
 <div style="margin-bottom: 120px;"></div>
@@ -216,7 +221,7 @@ However, the lifestyle variables lose significance...
 
 ---
 
-## Methodology {.smaller transition=none}
+## Results {.smaller transition=none}
 ### Interaction Analysis
 
 :::: {.columns}
@@ -236,22 +241,20 @@ We tested interactions between our 10 main predictors and 47 lifestyle variables
 
 ---
 
-## Methodology {.smaller transition=none}
+## Results {.smaller transition=none}
 ### Interaction Analysis
 
 <div style="margin-bottom: 40px;"></div>
 
 For each interaction, we calculated:
 
-<div style="margin-bottom: 40px;"></div>
+<div style="margin-bottom: 50px;"></div>
 
-$$\Delta_{effect} = |\beta_{classic \times lifestyle} - \beta_{classic}|$$
+**Difference Score Effect**: Difference between the classic model (main predictors of abortion) and the interaction model (classic model × lifestyle variables).
+
 <div style="margin-bottom: 60px;"></div>
 
-::: {.callout-note style="margin-top: 30px; border-radius: 12px; max-width: 85%; margin-left: auto; margin-right: auto;"}
-**Difference Score Effect**: Compared the classic model (main predictors of abortion) with the interaction model (classic model × lifestyle variables).
-:::
-
+$$\Delta_{effect} = |\beta_{classic \times lifestyle} - \beta_{classic}|$$
 ---
 
 ##
@@ -265,11 +268,11 @@ $$\Delta_{effect} = |\beta_{classic \times lifestyle} - \beta_{classic}|$$
 :::: {.columns}
 ::: {.column width="50%"}
 - **Strong Republican Identity**
-  - Craft Beer Consumption: Weakens relationship (-0.139**)
-  - Prius Ownership: Weakens relationship (-0.139***)
+  - Drinking Craft Beer: Weakens the negative relationship (-0.139**)
+  - Prius Ownership: Weakens the negative relationship (-0.139***)
 - **Soft Republican Identity**
-  - Hunting Frequency: Strengthens relationship (0.559**)
-  - Motorized Activities: Strengthens relationship (0.476***)
+  - Hunting Frequency: Strengthens the negative relationship (0.559**)
+  - Motorized Activities: Strengthens the negative relationship (0.476***)
  
 :::
 
@@ -277,8 +280,8 @@ $$\Delta_{effect} = |\beta_{classic \times lifestyle} - \beta_{classic}|$$
 ::: {.column width="50%"}
 
 - **Religiosity**
-  - Craft Beer Consumption: Weakens relationship (-0.132*)
-  - Video Game Playing: Weakens relationship (-0.057*)
+  - Drinking Craft Beer: Weakens the negative relationship (-0.132*)
+  - Video Game Playing: Weakens the negative relationship (-0.057*)
 
 :::
 ::::
@@ -287,20 +290,32 @@ $$\Delta_{effect} = |\beta_{classic \times lifestyle} - \beta_{classic}|$$
 
 ## Conclusion {.smaller}
 
+<div style="margin-bottom: 50px;"></div>
+
 ::: {.incremental}
 - **Traditional factors remain strong predictors, but...**
+
+<div style="margin-bottom: 30px;"></div>
+
 - **Lifestyle factors seem to have predictive power on abortion attitudes**
   - Specifically when interacting with strong predictors of abortion attitudes
   
 :::
 
+<div style="margin-bottom: 30px;"></div>
+
 ::: {.incremental}
+
 - **Limitations**
-  - Wording of our survey question 
-  - Comments/critiques on our methodology?
+
+  - Wording of our DV (single item measuring abortion attitudes)
+    - Abortion attitudes are more complex and often depend on the context
+
+<div style="margin-bottom: 30px;"></div>
+
+- **Comments/critiques on our methodology?**
 
 :::
-
  
 ---
 
