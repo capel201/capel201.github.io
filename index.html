@@ -5,139 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Présentations - Camille Pelletier</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
-            line-height: 1.4;
-            color: #00ff00;
-            background: #000000;
-            min-height: 100vh;
-            padding: 2rem;
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .prompt {
-            color: #00ff00;
-            font-size: 1rem;
-            margin-bottom: 1rem;
+            font-family: "Times New Roman", Times, serif;
+            background-color: #000000;
+            color: #ffffff;
+            margin: 20px;
+            line-height: 1.6;
         }
         
         h1 {
-            color: #ffffff;
-            font-size: 1.5rem;
-            font-weight: normal;
-            margin-bottom: 2rem;
-            font-family: inherit;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
         
-        .presentations-list {
-            margin: 2rem 0;
+        h2 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
         }
         
-        .presentation-item {
-            margin-bottom: 2rem;
-            padding-left: 2rem;
+        p {
+            margin: 10px 0;
         }
         
-        .presentation-item h2 {
-            color: #ffffff;
-            font-size: 1rem;
-            font-weight: normal;
-            margin-bottom: 0.5rem;
-        }
-        
-        .presentation-item p {
-            color: #888888;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-            padding-left: 2rem;
-        }
-        
-        .presentation-item a {
-            color: #00ff00;
-            text-decoration: none;
-            font-size: 0.9rem;
-        }
-        
-        .presentation-item a:hover {
+        a {
+            color: #0088cc;
             text-decoration: underline;
         }
         
-        .cursor {
-            color: #00ff00;
-            animation: blink 1s infinite;
+        a:visited {
+            color: #cc88ff;
         }
         
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
+        ul {
+            margin: 20px 0;
+            padding-left: 40px;
         }
         
-        .author {
-            margin-top: 3rem;
-            color: #666666;
-            font-size: 0.85rem;
+        li {
+            margin: 10px 0;
         }
         
-        @media (max-width: 600px) {
-            body {
-                padding: 1rem;
-            }
-            
-            .presentation-item {
-                padding-left: 1rem;
-            }
-            
-            .presentation-item p {
-                padding-left: 1rem;
-            }
+        hr {
+            border: none;
+            border-top: 1px solid #ffffff;
+            margin: 30px 0;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="prompt">$ ls -la presentations/</div>
-        <h1>camille@ulaval:~$ cat presentations.txt</h1>
+    <h1>Camille Pelletier</h1>
+    
+    <p>Université Laval</p>
+    
+    <hr>
+    
+    <h2>Presentations</h2>
+    
+    <ul>
+        <li><a href="FSS_intro_r/">Introduction à R</a> - Présentation d'introduction au langage de programmation R pour l'analyse de données et la recherche.</li>
         
-        <div class="presentations-list">
-            <div class="presentation-item">
-                <h2>1. Introduction à R</h2>
-                <p>// Présentation d'introduction au langage de programmation R</p>
-                <p>// pour l'analyse de données et la recherche.</p>
-                <a href="FSS_intro_r/">→ ./FSS_intro_r/</a>
-            </div>
-            
-            <div class="presentation-item">
-                <h2>2. Midi-Métho sur Zotero</h2>
-                <p>// Formation sur l'utilisation de Zotero pour la gestion</p>
-                <p>// bibliographique et la recherche académique.</p>
-                <a href="eiom_zotero/">→ ./eiom_zotero/</a>
-            </div>
-            
-            <div class="presentation-item">
-                <h2>3. Beyond Church and State</h2>
-                <p>// Présentation académique sur les relations entre religion</p>
-                <p>// et politique au-delà du cadre traditionnel.</p>
-                <a href="mpsa_presentation/">→ ./mpsa_presentation/</a>
-            </div>
-        </div>
+        <li><a href="eiom_zotero/">Midi-Métho sur Zotero</a> - Formation sur l'utilisation de Zotero pour la gestion bibliographique et la recherche académique.</li>
         
-        <div class="author">
-            <p>---</p>
-            <p>Author: Camille Pelletier</p>
-            <p>Institution: Université Laval</p>
-        </div>
-        
-        <div class="prompt">$ <span class="cursor">_</span></div>
-    </div>
+        <li><a href="mpsa_presentation/">Beyond Church and State</a> - Présentation académique sur les relations entre religion et politique au-delà du cadre traditionnel.</li>
+    </ul>
+    
+    <hr>
+    
+    <p><i>Last updated: August 2025</i></p>
 </body>
 </html>
