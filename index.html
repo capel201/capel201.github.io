@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentations - Camille Pelletier</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+            font-size: 2.5rem;
+            font-weight: 300;
+        }
+        
+        .presentations-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .presentation-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
+        }
+        
+        .presentation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .presentation-card h2 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.4rem;
+        }
+        
+        .presentation-card p {
+            color: #7f8c8d;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .presentation-card a {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .presentation-card a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .author {
+            text-align: center;
+            margin-top: 2rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mes Présentations</h1>
+        
+        <div class="presentations-grid">
+            <div class="presentation-card">
+                <h2>Introduction à R</h2>
+                <p>Présentation d'introduction au langage de programmation R pour l'analyse de données et la recherche.</p>
+                <a href="FSS_intro_r/">Voir la présentation</a>
+            </div>
+            
+            <div class="presentation-card">
+                <h2>Midi-Métho sur Zotero</h2>
+                <p>Formation sur l'utilisation de Zotero pour la gestion bibliographique et la recherche académique.</p>
+                <a href="eiom_zotero/">Voir la présentation</a>
+            </div>
+            
+            <div class="presentation-card">
+                <h2>Beyond Church and State</h2>
+                <p>Présentation académique sur les relations entre religion et politique au-delà du cadre traditionnel.</p>
+                <a href="mpsa_presentation/">Voir la présentation</a>
+            </div>
+        </div>
+        
+        <div class="author">
+            <p>Camille Pelletier - Université Laval</p>
+        </div>
+    </div>
+</body>
+</html>
