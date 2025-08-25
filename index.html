@@ -12,10 +12,10 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #e4e4e7;
+            background: #0a0a0a;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -23,86 +23,84 @@
         }
         
         .container {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
+            padding: 3rem 2rem;
         }
         
         h1 {
             text-align: center;
-            margin-bottom: 2rem;
-            color: #2c3e50;
-            font-size: 2.5rem;
-            font-weight: 300;
+            margin-bottom: 3rem;
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -0.025em;
         }
         
         .presentations-grid {
             display: grid;
-            gap: 1.5rem;
+            gap: 1rem;
             margin-top: 2rem;
         }
         
         .presentation-card {
-            background: white;
-            border-radius: 10px;
+            background: #111111;
+            border: 1px solid #27272a;
+            border-radius: 6px;
             padding: 1.5rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            border-left: 4px solid #667eea;
+            transition: all 0.2s ease;
         }
         
         .presentation-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            border-color: #3f3f46;
+            background: #161616;
         }
         
         .presentation-card h2 {
-            color: #2c3e50;
+            color: #ffffff;
             margin-bottom: 0.5rem;
-            font-size: 1.4rem;
+            font-size: 1.125rem;
+            font-weight: 600;
         }
         
         .presentation-card p {
-            color: #7f8c8d;
-            margin-bottom: 1rem;
-            font-size: 0.95rem;
+            color: #a1a1aa;
+            margin-bottom: 1.25rem;
+            font-size: 0.875rem;
+            line-height: 1.5;
         }
         
         .presentation-card a {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 0.7rem 1.5rem;
+            background: #ffffff;
+            color: #000000;
+            padding: 0.5rem 1rem;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 4px;
+            font-size: 0.875rem;
             font-weight: 500;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
         }
         
         .presentation-card a:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            background: #f4f4f5;
         }
         
         .author {
             text-align: center;
-            margin-top: 2rem;
-            color: #7f8c8d;
-            font-style: italic;
+            margin-top: 3rem;
+            color: #71717a;
+            font-size: 0.875rem;
         }
         
         @media (max-width: 600px) {
             .container {
                 margin: 1rem;
-                padding: 1.5rem;
+                padding: 2rem 1.5rem;
             }
             
             h1 {
-                font-size: 2rem;
+                font-size: 1.75rem;
             }
         }
     </style>
