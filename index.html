@@ -12,126 +12,132 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #e4e4e7;
-            background: #0a0a0a;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+            line-height: 1.4;
+            color: #00ff00;
+            background: #000000;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 2rem;
         }
         
         .container {
-            max-width: 700px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 3rem 2rem;
+        }
+        
+        .prompt {
+            color: #00ff00;
+            font-size: 1rem;
+            margin-bottom: 1rem;
         }
         
         h1 {
-            text-align: center;
-            margin-bottom: 3rem;
             color: #ffffff;
-            font-size: 2rem;
-            font-weight: 600;
-            letter-spacing: -0.025em;
+            font-size: 1.5rem;
+            font-weight: normal;
+            margin-bottom: 2rem;
+            font-family: inherit;
         }
         
-        .presentations-grid {
-            display: grid;
-            gap: 1rem;
-            margin-top: 2rem;
+        .presentations-list {
+            margin: 2rem 0;
         }
         
-        .presentation-card {
-            background: #111111;
-            border: 1px solid #27272a;
-            border-radius: 6px;
-            padding: 1.5rem;
-            transition: all 0.2s ease;
+        .presentation-item {
+            margin-bottom: 2rem;
+            padding-left: 2rem;
         }
         
-        .presentation-card:hover {
-            border-color: #3f3f46;
-            background: #161616;
-        }
-        
-        .presentation-card h2 {
+        .presentation-item h2 {
             color: #ffffff;
+            font-size: 1rem;
+            font-weight: normal;
             margin-bottom: 0.5rem;
-            font-size: 1.125rem;
-            font-weight: 600;
         }
         
-        .presentation-card p {
-            color: #a1a1aa;
-            margin-bottom: 1.25rem;
-            font-size: 0.875rem;
-            line-height: 1.5;
+        .presentation-item p {
+            color: #888888;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            padding-left: 2rem;
         }
         
-        .presentation-card a {
-            display: inline-block;
-            background: #ffffff;
-            color: #000000;
-            padding: 0.5rem 1rem;
+        .presentation-item a {
+            color: #00ff00;
             text-decoration: none;
-            border-radius: 4px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            transition: all 0.2s ease;
+            font-size: 0.9rem;
         }
         
-        .presentation-card a:hover {
-            background: #f4f4f5;
+        .presentation-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .cursor {
+            color: #00ff00;
+            animation: blink 1s infinite;
+        }
+        
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
         }
         
         .author {
-            text-align: center;
             margin-top: 3rem;
-            color: #71717a;
-            font-size: 0.875rem;
+            color: #666666;
+            font-size: 0.85rem;
         }
         
         @media (max-width: 600px) {
-            .container {
-                margin: 1rem;
-                padding: 2rem 1.5rem;
+            body {
+                padding: 1rem;
             }
             
-            h1 {
-                font-size: 1.75rem;
+            .presentation-item {
+                padding-left: 1rem;
+            }
+            
+            .presentation-item p {
+                padding-left: 1rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Mes Présentations</h1>
+        <div class="prompt">$ ls -la presentations/</div>
+        <h1>camille@ulaval:~$ cat presentations.txt</h1>
         
-        <div class="presentations-grid">
-            <div class="presentation-card">
-                <h2>Introduction à R</h2>
-                <p>Présentation d'introduction au langage de programmation R pour l'analyse de données et la recherche.</p>
-                <a href="FSS_intro_r/">Voir la présentation</a>
+        <div class="presentations-list">
+            <div class="presentation-item">
+                <h2>1. Introduction à R</h2>
+                <p>// Présentation d'introduction au langage de programmation R</p>
+                <p>// pour l'analyse de données et la recherche.</p>
+                <a href="FSS_intro_r/">→ ./FSS_intro_r/</a>
             </div>
             
-            <div class="presentation-card">
-                <h2>Midi-Métho sur Zotero</h2>
-                <p>Formation sur l'utilisation de Zotero pour la gestion bibliographique et la recherche académique.</p>
-                <a href="eiom_zotero/">Voir la présentation</a>
+            <div class="presentation-item">
+                <h2>2. Midi-Métho sur Zotero</h2>
+                <p>// Formation sur l'utilisation de Zotero pour la gestion</p>
+                <p>// bibliographique et la recherche académique.</p>
+                <a href="eiom_zotero/">→ ./eiom_zotero/</a>
             </div>
             
-            <div class="presentation-card">
-                <h2>Beyond Church and State</h2>
-                <p>Présentation académique sur les relations entre religion et politique au-delà du cadre traditionnel.</p>
-                <a href="mpsa_presentation/">Voir la présentation</a>
+            <div class="presentation-item">
+                <h2>3. Beyond Church and State</h2>
+                <p>// Présentation académique sur les relations entre religion</p>
+                <p>// et politique au-delà du cadre traditionnel.</p>
+                <a href="mpsa_presentation/">→ ./mpsa_presentation/</a>
             </div>
         </div>
         
         <div class="author">
-            <p>Camille Pelletier - Université Laval</p>
+            <p>---</p>
+            <p>Author: Camille Pelletier</p>
+            <p>Institution: Université Laval</p>
         </div>
+        
+        <div class="prompt">$ <span class="cursor">_</span></div>
     </div>
 </body>
 </html>
