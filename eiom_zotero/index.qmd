@@ -1,0 +1,288 @@
+---
+title: Midi-Métho sur Zotero
+author: Camille Pelletier
+institute: Université Laval
+format:
+  revealjs:
+    mermaid: 
+      theme: dark
+    theme: simple
+    logo: _SharedFolder_capsule_zotero/img/logo_CLESSN.png
+    footer: "Zotero"
+    transition: slide
+    transition-speed: fast
+---
+
+## Objectifs de ce Midi-Métho {.smaller}
+
+<br>
+
+::: {.fragment .fade-in}
+### À la fin de cette formation, vous serez capable de :
+:::
+
+::: {.incremental}
+- 📚 **Organiser efficacement** vos références bibliographiques
+- ⚡ **Automatiser** la création de bibliographies
+- 🔗 **Intégrer** Zotero avec Word, Google Docs et Quarto
+- 📱 **Synchroniser** votre bibliothèque sur tous vos appareils
+- 🎯 **Optimiser** votre flux de travail de recherche
+:::
+
+---
+
+## Le défi de la gestion bibliographique {.smaller}
+
+<br>
+
+::: {.columns}
+::: {.column width="50%"}
+### 😰 Sans outil adapté :
+- Références perdues ou mal organisées
+- Formats de citation incohérents
+- Temps perdu à reformater
+- Risque de plagiat involontaire
+:::
+
+::: {.column width="50%"}
+### ✅ Avec un bon outil :
+- Bibliothèque centralisée
+- Citations automatiques
+- Formats standardisés
+- Collaboration facilitée
+:::
+:::
+
+---
+
+## Panorama des outils disponibles {.smaller}
+
+<br>
+
+| Outil | Coût | Avantages | Inconvénients |
+|-------|------|-----------|---------------|
+| **Zotero** | Gratuit | Open source, très flexible | Interface parfois complexe |
+| **Mendeley** | Freemium | Interface moderne | Limité en version gratuite |
+| **EndNote** | Payant | Très complet | Coûteux, courbe d'apprentissage |
+| **RefWorks** | Payant | Intégration institutionnelle | Moins flexible |
+
+---
+
+## Pourquoi Zotero ? {.smaller}
+
+<br>
+
+::: {.column width="60%"}
+### 🌟 Avantages clés :
+
+::: {.incremental}
+- **100% gratuit** et open source
+- **Multiplateforme** (Windows, Mac, Linux)
+- **Intégration parfaite** avec LaTeX, Quarto, Word
+- **Synchronisation cloud** (300 MB gratuits)
+- **Extensions navigateur** pour tous les navigateurs
+- **Communauté active** et support excellent
+:::
+
+:::
+
+
+---
+
+## Importer des références {.smaller}
+
+<br>
+
+::: {.incremental}
+1. **Extension navigateur** (un clic sur n'importe quel site)
+2. **Importation par DOI** ou ISBN
+3. **Drag & drop de PDF** (reconnaissance automatique)
+4. **Ajout manuel** pour sources spéciales
+:::
+
+::: {.callout-tip}
+## Astuce
+L'extension Zotero détecte automatiquement le type de document et extrait toutes les métadonnées !
+:::
+
+---
+
+## Créer des collections {.smaller}
+
+<br>
+
+::: {.columns}
+::: {.column width="40%"}
+
+::: {.incremental}
+- 📁 **Collections** = dossiers thématiques
+- 🏷️ **Tags** = étiquettes pour recherche rapide  
+- 🔍 **Recherche avancée** = tous les champs
+:::
+:::
+
+::: {.column width="60%"}
+![](_SharedFolder_capsule_zotero/img/créer_collections.png){fig-align="center" width="90%"}
+:::
+:::
+
+---
+
+## Générer des bibliographies {.smaller}
+
+<br>
+
+::: {.columns}
+::: {.column width="40%"}
+
+::: {.incremental}
+- **Clic droit** → Créer une bibliographie
+- **Plus de 10 000 styles** disponibles (APA, MLA, Chicago...)
+- **Export direct** vers Word, LibreOffice, Google Docs
+- **Format BibTeX** pour LaTeX/Quarto
+:::
+:::
+
+::: {.column width="60%"}
+![](_SharedFolder_capsule_zotero/img/import_references_1.png){fig-align="center" width="90%"}
+:::
+:::
+
+---
+
+## Intégration avec les traitements de texte {.smaller}
+
+<br>
+
+::: {.columns}
+::: {.column width="50%"}
+### Microsoft Word
+- Plugin officiel Zotero
+- Citations en temps réel
+- Bibliographie auto-générée
+- Styles modifiables à la volée
+:::
+
+::: {.column width="50%"}
+### Google Docs
+- Extension navigateur
+- Collaboration temps réel
+- Sync automatique
+- Parfait pour travail d'équipe
+:::
+:::
+
+::: {.callout-note}
+## Configuration
+Installation automatique lors de l'installation de Zotero Desktop
+:::
+
+---
+
+## Workflow avec les langages de balisage {.smaller}
+
+<br>
+
+### 🔄 Processus optimisé :
+
+::: {.incremental}
+1. **Better BibTeX** pour export automatique
+2. **Fichier .bib** toujours à jour
+3. **Citations** avec `@clé` dans Quarto
+4. **Bibliographie** générée automatiquement
+:::
+
+---
+
+## Installation pas à pas {.smaller}
+
+<br>
+
+### 1️⃣ Téléchargement
+- Rendez-vous sur **<https://www.zotero.org/download/>**
+- Choisissez votre système d'exploitation
+- Version recommandée : **Zotero 6.x** (stable)
+
+### 2️⃣ Configuration initiale
+::: {.incremental}
+- Créer un **compte Zotero.org** (synchronisation)
+- Installer l'**extension navigateur**
+- Installer **Better BibTeX** (pour LaTeX/Quarto)
+:::
+
+---
+
+## Plugins incontournables {.smaller}
+
+<br>
+
+| Plugin | Fonction | Utilité |
+|--------|----------|---------|
+| **Better BibTeX** | Export LaTeX/Quarto | Indispensable pour l'académique |
+| **Zotfile** | Gestion des PDF | Renommage et organisation |
+| **Mdnotes** | Export Markdown | Notes structurées |
+
+::: {.callout-warning}
+## Attention
+Vérifiez la compatibilité des plugins avec votre version de Zotero
+:::
+
+---
+
+## Bonnes pratiques {.smaller}
+
+<br>
+
+### 📋 Organisation recommandée :
+
+::: {.incremental}
+- **Collections par projet** ou par cours
+- **Tags cohérents** (mots-clés standardisés)
+- **Nettoyage périodique** des doublons
+- **Vérification des métadonnées** importées
+:::
+
+### 🔄 Workflow type :
+**Recherche** → **Import** → **Vérification** → **Organisation** → **Citation**
+
+---
+
+## Collaboration et partage {.smaller}
+
+<br>
+
+::: {.columns}
+::: {.column width="50%"}
+### 👥 Groupes Zotero
+- **Groupes privés** (équipe de recherche)
+- **Groupes publics** (communauté)
+- **Bibliothèques partagées**
+- **Permissions granulaires**
+:::
+
+::: {.column width="50%"}
+### 📊 Limites à connaître
+- **300 MB** gratuits en ligne
+- **Stockage illimité** en local
+- **Plans payants** pour plus d'espace
+- **Synchronisation sélective** possible
+:::
+:::
+
+---
+
+## Ressources et support {.smaller}
+
+<br>
+
+### 📚 Documentation officielle :
+- **Manuel utilisateur** : <https://www.zotero.org/support/>
+- **Forums communauté** : <https://forums.zotero.org/>
+
+### 🎓 Formations complémentaires :
+- **Bibliothèques universitaires** : sessions spécialisées
+- **Documentation Quarto** : <https://quarto.org/docs/authoring/footnotes-and-citations.html>
+
+---
+
+## Merci pour votre attention ! {.center}
