@@ -5,109 +5,202 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Présentations - Camille Pelletier</title>
     <style>
-        body {
-            font-family: "Times New Roman", Times, serif;
-            background-color: #121212;
-            color: #e6e6e6;
+        * {
             margin: 0;
-            padding: 40px 20px;
-            line-height: 1.7;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #f5f5f7;
+            line-height: 1.5;
+        }
+        
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 80px 0 60px 0;
+            text-align: center;
         }
         
         h1 {
-            font-size: 42px;
+            font-size: 56px;
             font-weight: 700;
-            margin-bottom: 8px;
+            letter-spacing: -0.02em;
             color: #ffffff;
-            letter-spacing: -0.5px;
+            margin-bottom: 16px;
         }
         
         .subtitle {
-            font-size: 16px;
-            color: #a0a0a0;
-            margin-bottom: 40px;
+            font-size: 21px;
             font-weight: 400;
+            color: #a1a1a6;
+            margin-bottom: 60px;
         }
         
-        h2 {
+        .presentations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+        
+        .presentation-card {
+            background: #2d2d30;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid #424245;
+        }
+        
+        .presentation-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: #515154;
+        }
+        
+        .card-content {
+            padding: 32px;
+        }
+        
+        .card-title {
             font-size: 24px;
             font-weight: 600;
-            margin: 50px 0 20px 0;
             color: #ffffff;
-            border-bottom: 1px solid #333333;
-            padding-bottom: 8px;
+            margin-bottom: 12px;
+            line-height: 1.3;
         }
         
-        .presentation {
-            margin: 30px 0;
-            padding: 20px 0;
-            border-bottom: 1px solid #2a2a2a;
-        }
-        
-        .presentation:last-child {
-            border-bottom: none;
-        }
-        
-        .presentation h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #ffffff;
-        }
-        
-        .presentation h3 a {
-            color: #ffffff;
+        .card-title a {
+            color: inherit;
             text-decoration: none;
+            transition: color 0.2s ease;
         }
         
-        .presentation h3 a:hover {
-            color: #cccccc;
-            text-decoration: underline;
+        .card-title a:hover {
+            color: #0071e3;
         }
         
-        .presentation p {
+        .card-description {
             font-size: 16px;
-            color: #b0b0b0;
-            margin: 0;
-            line-height: 1.6;
+            color: #a1a1a6;
+            line-height: 1.5;
+            margin-bottom: 24px;
         }
         
-        .footer {
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid #333333;
-            font-size: 14px;
-            color: #808080;
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 500;
+            color: #0071e3;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        .card-link:hover {
+            color: #0077ed;
+        }
+        
+        .card-link::after {
+            content: "→";
+            margin-left: 8px;
+            transition: transform 0.2s ease;
+        }
+        
+        .card-link:hover::after {
+            transform: translateX(2px);
+        }
+        
+        footer {
             text-align: center;
+            padding: 40px 0 80px 0;
+            border-top: 1px solid #424245;
+        }
+        
+        .footer-text {
+            font-size: 14px;
+            color: #86868b;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+            
+            .presentations {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .card-content {
+                padding: 24px;
+            }
+            
+            header {
+                padding: 60px 0 40px 0;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Camille Pelletier</h1>
-    <p class="subtitle">Université Laval</p>
-    
-    <h2>Research Presentations</h2>
-    
-    <div class="presentation">
-        <h3><a href="FSS_intro_r/">Introduction à R</a></h3>
-        <p>Présentation d'introduction au langage de programmation R pour l'analyse de données et la recherche.</p>
-    </div>
-    
-    <div class="presentation">
-        <h3><a href="eiom_zotero/">Midi-Métho sur Zotero</a></h3>
-        <p>Formation sur l'utilisation de Zotero pour la gestion bibliographique et la recherche académique.</p>
-    </div>
-    
-    <div class="presentation">
-        <h3><a href="mpsa_presentation/">Beyond Church and State</a></h3>
-        <p>Présentation académique sur les relations entre religion et politique au-delà du cadre traditionnel.</p>
-    </div>
-    
-    <div class="footer">
-        Last updated August 2025
+    <div class="container">
+        <header>
+            <h1>Camille Pelletier</h1>
+            <p class="subtitle">Université Laval</p>
+        </header>
+        
+        <main class="presentations">
+            <div class="presentation-card">
+                <div class="card-content">
+                    <h2 class="card-title">
+                        <a href="FSS_intro_r/">Introduction à R</a>
+                    </h2>
+                    <p class="card-description">
+                        Présentation d'introduction au langage de programmation R pour l'analyse de données et la recherche.
+                    </p>
+                    <a href="FSS_intro_r/" class="card-link">View presentation</a>
+                </div>
+            </div>
+            
+            <div class="presentation-card">
+                <div class="card-content">
+                    <h2 class="card-title">
+                        <a href="eiom_zotero/">Midi-Métho sur Zotero</a>
+                    </h2>
+                    <p class="card-description">
+                        Formation sur l'utilisation de Zotero pour la gestion bibliographique et la recherche académique.
+                    </p>
+                    <a href="eiom_zotero/" class="card-link">View presentation</a>
+                </div>
+            </div>
+            
+            <div class="presentation-card">
+                <div class="card-content">
+                    <h2 class="card-title">
+                        <a href="mpsa_presentation/">Beyond Church and State</a>
+                    </h2>
+                    <p class="card-description">
+                        Présentation académique sur les relations entre religion et politique au-delà du cadre traditionnel.
+                    </p>
+                    <a href="mpsa_presentation/" class="card-link">View presentation</a>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p class="footer-text">Last updated August 2025</p>
+        </footer>
     </div>
 </body>
 </html>
