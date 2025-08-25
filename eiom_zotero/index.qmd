@@ -7,7 +7,7 @@ format:
     mermaid: 
       theme: dark
     theme: simple
-    logo: _SharedFolder_capsule_zotero/img/logo_CLESSN.png
+    logo: https://raw.githubusercontent.com/capel201/capel201.github.io/main/eiom_zotero/_SharedFolder_capsule_zotero/img/logo_CLESSN.png
     footer: "Zotero"
     transition: slide
     transition-speed: fast
@@ -121,7 +121,7 @@ L'extension Zotero détecte automatiquement le type de document et extrait toute
 :::
 
 ::: {.column width="60%"}
-![](_SharedFolder_capsule_zotero/img/créer_collections.png){fig-align="center" width="90%"}
+![](https://raw.githubusercontent.com/capel201/capel201.github.io/main/eiom_zotero/_SharedFolder_capsule_zotero/img/créer_collections.png){fig-align="center" width="90%"}
 :::
 :::
 
@@ -143,7 +143,7 @@ L'extension Zotero détecte automatiquement le type de document et extrait toute
 :::
 
 ::: {.column width="60%"}
-![](_SharedFolder_capsule_zotero/img/import_references_1.png){fig-align="center" width="90%"}
+![](https://raw.githubusercontent.com/capel201/capel201.github.io/main/eiom_zotero/_SharedFolder_capsule_zotero/img/import_references_1.png){fig-align="center" width="90%"}
 :::
 :::
 
