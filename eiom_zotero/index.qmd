@@ -22,11 +22,10 @@ format:
 :::
 
 ::: {.incremental}
-- 📚 **Organiser efficacement** vos références bibliographiques
-- ⚡ **Automatiser** la création de bibliographies
-- 🔗 **Intégrer** Zotero avec Word, Google Docs et Quarto
-- 📱 **Synchroniser** votre bibliothèque sur tous vos appareils
-- 🎯 **Optimiser** votre flux de travail de recherche
+- **Organiser efficacement** vos références bibliographiques
+- **Automatiser** la création de bibliographies
+- **Intégrer** Zotero avec logiciel de traitement de texte (Word, Google Docs et Quarto)
+- **Optimiser** votre workflow
 :::
 
 ---
@@ -53,6 +52,7 @@ format:
 :::
 :::
 
+
 ---
 
 ## Panorama des outils disponibles {.smaller}
@@ -61,12 +61,12 @@ format:
 
 | Outil | Coût | Avantages | Inconvénients |
 |-------|------|-----------|---------------|
-| **Zotero** | Gratuit | Open source, très flexible | Interface parfois complexe |
-| **Mendeley** | Freemium | Interface moderne | Limité en version gratuite |
-| **EndNote** | Payant | Très complet | Coûteux, courbe d'apprentissage |
-| **RefWorks** | Payant | Intégration institutionnelle | Moins flexible |
+| Zotero | Gratuit | Open source, très flexible | Interface parfois complexe |
+| Mendeley | Freemium | Interface moderne | Limité en version gratuite |
+| EndNote | Payant | Très complet | Coûteux, courbe d'apprentissage |
+| RefWorks | Payant | Intégration institutionnelle | Moins flexible |
 
----
+--- 
 
 ## Pourquoi Zotero ? {.smaller}
 
@@ -76,12 +76,11 @@ format:
 ### 🌟 Avantages clés :
 
 ::: {.incremental}
-- **100% gratuit** et open source
+- **Open source** donc le code source est disponible
 - **Multiplateforme** (Windows, Mac, Linux)
-- **Intégration parfaite** avec LaTeX, Quarto, Word
-- **Synchronisation cloud** (300 MB gratuits)
+- **Intégration** avec LaTeX, Quarto, Word
 - **Extensions navigateur** pour tous les navigateurs
-- **Communauté active** et support excellent
+- **Communauté active**
 :::
 
 :::
@@ -117,7 +116,7 @@ L'extension Zotero détecte automatiquement le type de document et extrait toute
 ::: {.incremental}
 - 📁 **Collections** = dossiers thématiques
 - 🏷️ **Tags** = étiquettes pour recherche rapide  
-- 🔍 **Recherche avancée** = tous les champs
+- 🔍 **Recherche avancée** = tous vos documents
 :::
 :::
 
@@ -139,7 +138,7 @@ L'extension Zotero détecte automatiquement le type de document et extrait toute
 - **Clic droit** → Créer une bibliographie
 - **Plus de 10 000 styles** disponibles (APA, MLA, Chicago...)
 - **Export direct** vers Word, LibreOffice, Google Docs
-- **Format BibTeX** pour LaTeX/Quarto
+- **Export en format BibTeX** pour LaTeX/Quarto
 :::
 :::
 
@@ -190,24 +189,6 @@ Installation automatique lors de l'installation de Zotero Desktop
 2. **Fichier .bib** toujours à jour
 3. **Citations** avec `@clé` dans Quarto
 4. **Bibliographie** générée automatiquement
-:::
-
----
-
-## Installation pas à pas {.smaller}
-
-<br>
-
-### 1️⃣ Téléchargement
-- Rendez-vous sur **<https://www.zotero.org/download/>**
-- Choisissez votre système d'exploitation
-- Version recommandée : **Zotero 6.x** (stable)
-
-### 2️⃣ Configuration initiale
-::: {.incremental}
-- Créer un **compte Zotero.org** (synchronisation)
-- Installer l'**extension navigateur**
-- Installer **Better BibTeX** (pour LaTeX/Quarto)
 :::
 
 ---
@@ -265,8 +246,25 @@ Vérifiez la compatibilité des plugins avec votre version de Zotero
 - **300 MB** gratuits en ligne
 - **Stockage illimité** en local
 - **Plans payants** pour plus d'espace
-- **Synchronisation sélective** possible
 :::
+:::
+
+---
+
+## Installation pas à pas {.smaller}
+
+<br>
+
+### 1️⃣ Téléchargement
+- Rendez-vous sur **<https://www.zotero.org/download/>**
+- Choisissez votre système d'exploitation
+- Version recommandée : **Zotero 6.x** (stable)
+
+### 2️⃣ Configuration initiale
+::: {.incremental}
+- Créer un **compte Zotero.org** (synchronisation)
+- Installer l'**extension navigateur**
+- Installer (au besoin) **Better BibTeX** (pour LaTeX/Quarto)
 :::
 
 ---
