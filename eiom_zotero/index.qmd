@@ -195,7 +195,6 @@ L'extension Zotero détecte automatiquement le type de document et extrait toute
 ::: {.columns}
 ::: {.column width="40%"}
 
-### Rapports détaillés
 - **Résumé** de la collection
 - **Statistiques** (auteur, année, type)
 - **Export** en HTML, PDF, etc.
