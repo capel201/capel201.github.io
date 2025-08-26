@@ -125,6 +125,23 @@ L'extension Zotero détecte automatiquement le type de document et extrait toute
 :::
 :::
 
+--- Annoter des documents {.smaller}
+
+<br>
+
+::: {.columns}
+::: {.column width="40%"}
+
+- **Annotations** directement sur les PDF
+- **Notes** centralisées dans Zotero
+- **Recherche** dans les annotations
+
+:::
+
+::: {.column width="60%"}
+![](https://raw.githubusercontent.com/capel201/capel201.github.io/main/eiom_zotero/_SharedFolder_capsule_zotero/img/note.png){fig-align="center" width="90%"}
+:::
+
 ---
 
 ## Générer des bibliographies {.smaller}
