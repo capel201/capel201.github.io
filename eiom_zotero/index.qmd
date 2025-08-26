@@ -44,7 +44,7 @@ format:
 :::
 
 ::: {.column width="50%"}
-### ✅ Avec un bon outil :
+### Avec un bon outil :
 - Bibliothèque centralisée
 - Citations automatiques
 - Formats standardisés
@@ -115,7 +115,7 @@ L'extension Zotero détecte automatiquement le type de document et extrait toute
 
 ::: {.incremental}
 - 📁 **Collections** = dossiers thématiques
-- 🏷️ **Tags** = étiquettes pour recherche rapide  
+- 🏷️ **Tags** = étiquettes pour recherche par sujet  
 - 🔍 **Recherche avancée** = tous vos documents
 :::
 :::
@@ -199,9 +199,11 @@ Installation automatique lors de l'installation de Zotero Desktop
 
 | Plugin | Fonction | Utilité |
 |--------|----------|---------|
+| **Zotfile** | Gestion des PDF | Renommage, organisation et stockage |
 | **Better BibTeX** | Export LaTeX/Quarto | Indispensable pour l'académique |
-| **Zotfile** | Gestion des PDF | Renommage et organisation |
 | **Mdnotes** | Export Markdown | Notes structurées |
+
+<br>
 
 ::: {.callout-warning}
 ## Attention
@@ -218,12 +220,12 @@ Vérifiez la compatibilité des plugins avec votre version de Zotero
 
 ::: {.incremental}
 - **Collections par projet** ou par cours
-- **Tags cohérents** (mots-clés standardisés)
+- **Tags** mots-clés par sujet
 - **Nettoyage périodique** des doublons
 - **Vérification des métadonnées** importées
 :::
 
-### 🔄 Workflow type :
+### 🔄 Workflow idéal :
 **Recherche** → **Import** → **Vérification** → **Organisation** → **Citation**
 
 ---
@@ -238,14 +240,12 @@ Vérifiez la compatibilité des plugins avec votre version de Zotero
 - **Groupes privés** (équipe de recherche)
 - **Groupes publics** (communauté)
 - **Bibliothèques partagées**
-- **Permissions granulaires**
 :::
 
 ::: {.column width="50%"}
 ### 📊 Limites à connaître
 - **300 MB** gratuits en ligne
 - **Stockage illimité** en local
-- **Plans payants** pour plus d'espace
 :::
 :::
 
@@ -264,7 +264,7 @@ Vérifiez la compatibilité des plugins avec votre version de Zotero
 ::: {.incremental}
 - Créer un **compte Zotero.org** (synchronisation)
 - Installer l'**extension navigateur**
-- Installer (au besoin) **Better BibTeX** (pour LaTeX/Quarto)
+- Installer (au besoin) **Better BibTeX** pour LaTeX/Quarto
 :::
 
 ---
