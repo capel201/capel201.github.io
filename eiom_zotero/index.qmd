@@ -125,22 +125,44 @@ L'extension Zotero détecte automatiquement le type de document et extrait toute
 :::
 :::
 
---- Annoter des documents {.smaller}
+--- 
+
+## Créer des collections {.smaller}
+
+<br>
+
+![](https://raw.githubusercontent.com/capel201/capel201.github.io/main/eiom_zotero/_SharedFolder_capsule_zotero/img/créer_collections.png){fig-align="center" width="90%"}
+
+--- 
+
+## Annoter des documents {.smaller}
 
 <br>
 
 ::: {.columns}
+
 ::: {.column width="40%"}
 
-- **Annotations** directement sur les PDF
-- **Notes** centralisées dans Zotero
+- 📝 **Annotations** directement sur les PDF
+- 📄 **Notes** centralisées dans Zotero
 - **Recherche** dans les annotations
 
 :::
 
 ::: {.column width="60%"}
+
 ![](https://raw.githubusercontent.com/capel201/capel201.github.io/main/eiom_zotero/_SharedFolder_capsule_zotero/img/note.png){fig-align="center" width="90%"}
 :::
+
+:::
+
+---
+
+## Annoter des documents {.smaller}
+
+<br>
+
+![](https://raw.githubusercontent.com/capel201/capel201.github.io/main/eiom_zotero/_SharedFolder_capsule_zotero/img/note.png){fig-align="center" width="90%"}
 
 ---
 
@@ -176,7 +198,7 @@ L'extension Zotero détecte automatiquement le type de document et extrait toute
 - Plugin officiel Zotero
 - Citations en temps réel
 - Bibliographie auto-générée
-- Styles modifiables à la volée
+- Styles modifiables directement dans Zotero
 :::
 
 ::: {.column width="50%"}
@@ -184,7 +206,6 @@ L'extension Zotero détecte automatiquement le type de document et extrait toute
 - Extension navigateur
 - Collaboration temps réel
 - Sync automatique
-- Parfait pour travail d'équipe
 :::
 :::
 
@@ -233,7 +254,7 @@ Vérifiez la compatibilité des plugins avec votre version de Zotero
 
 <br>
 
-### 📋 Organisation recommandée :
+### Organisation recommandée :
 
 ::: {.incremental}
 - **Collections par projet** ou par cours
@@ -241,6 +262,8 @@ Vérifiez la compatibilité des plugins avec votre version de Zotero
 - **Nettoyage périodique** des doublons
 - **Vérification des métadonnées** importées
 :::
+
+<br>
 
 ### 🔄 Workflow idéal :
 **Recherche** → **Import** → **Vérification** → **Organisation** → **Citation**
